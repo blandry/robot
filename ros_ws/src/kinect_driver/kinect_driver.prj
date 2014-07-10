@@ -1,0 +1,24 @@
+kinect_driver=/home/edno/ws/src/kinect_driver CD=. in= out= filter="*.cpp *.c *.h *.hpp *.txt *.xml README"{
+ CMakeLists.txt
+ package.xml
+ README
+src=/home/edno/ws/src/kinect_driver/src{
+  bgr_driver_node.cpp
+  depth_map_driver_node.cpp
+  gray_driver_node.cpp
+  valid_mask_driver_node.cpp
+ kinect_driver=/home/edno/ws/src/kinect_driver/src/kinect_driver{
+   bgr_driver.cpp
+   driver.cpp
+   gray_driver.cpp
+   kinect_driver.cpp
+ }
+}
+include=/home/edno/ws/src/kinect_driver/include/kinect_driver{
+  bgr_driver.h
+  driver.h
+  gray_driver.h
+  kinect_driver.h
+}
+} 
+
