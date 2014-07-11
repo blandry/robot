@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/edno/projetos/robot/cmdMessenger-cpp/src/teste.cpp
+iostream
+-
+serial/serial.h
+/home/edno/projetos/robot/cmdMessenger-cpp/src/serial/serial.h
+

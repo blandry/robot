@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././include/CmdBase.h
+
+.././include/CmdReceived.h
+iostream
+-
+queue
+-
+CmdBase.h
+.././include/CmdBase.h
+
+/home/edno/projetos/robot/cmdMessenger-cpp/src/CmdReceived.cpp
+iostream
+-
+sstream
+-
+cstdlib
+-
+CmdReceived.h
+/home/edno/projetos/robot/cmdMessenger-cpp/src/CmdReceived.h
+

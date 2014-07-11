@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././include/CmdBase.h
+
+/home/edno/projetos/robot/cmdMessenger-cpp/src/CmdBase.cpp
+CmdBase.h
+/home/edno/projetos/robot/cmdMessenger-cpp/src/CmdBase.h
+

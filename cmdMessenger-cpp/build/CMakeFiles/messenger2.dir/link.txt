@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libmessenger2.so -o libmessenger2.so CMakeFiles/messenger2.dir/src/CmdMessenger.cpp.o CMakeFiles/messenger2.dir/src/CmdBase.cpp.o CMakeFiles/messenger2.dir/src/CmdSend.cpp.o CMakeFiles/messenger2.dir/src/CmdReceived.cpp.o -lserial 

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libmessenger.a  CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o
+/usr/bin/ranlib libmessenger.a

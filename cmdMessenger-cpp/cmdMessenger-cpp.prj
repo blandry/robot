@@ -1,0 +1,26 @@
+cmdMessenger-cpp=/home/edno/projetos/robot/cmdMessenger-cpp CD=. in= out= filter="*.cpp *.c *.h *.hpp *.txt README"{
+ CMakeLists.txt
+ README
+src=/home/edno/projetos/robot/cmdMessenger-cpp/src{
+  CmdBase.cpp
+  CmdMessenger.cpp
+  CmdReceived.cpp
+  CmdSend.cpp
+  hello.cpp
+  interbyte.cpp
+  led.cpp
+  parser.cpp
+  teste.cpp
+  token.cpp
+  tokenizer.cpp
+  transform_teste.cpp
+}
+include=/home/edno/projetos/robot/cmdMessenger-cpp/include{
+  CmdBase.h
+  CmdMessenger.h
+  CmdReceived.h
+  CmdSend.h
+  tokenizer.h
+}
+} 
+

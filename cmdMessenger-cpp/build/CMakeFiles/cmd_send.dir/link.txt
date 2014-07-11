@@ -1,0 +1,2 @@
+/usr/bin/ar cr libcmd_send.a  CMakeFiles/cmd_send.dir/src/CmdSend.cpp.o
+/usr/bin/ranlib libcmd_send.a

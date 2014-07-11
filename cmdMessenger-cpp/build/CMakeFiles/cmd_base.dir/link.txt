@@ -1,0 +1,2 @@
+/usr/bin/ar cr libcmd_base.a  CMakeFiles/cmd_base.dir/src/CmdBase.cpp.o
+/usr/bin/ranlib libcmd_base.a

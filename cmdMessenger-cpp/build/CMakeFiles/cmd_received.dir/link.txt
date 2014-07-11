@@ -1,0 +1,2 @@
+/usr/bin/ar cr libcmd_received.a  CMakeFiles/cmd_received.dir/src/CmdReceived.cpp.o
+/usr/bin/ranlib libcmd_received.a

@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/parse.dir/src/parser.cpp.o  -o parse -rdynamic 
