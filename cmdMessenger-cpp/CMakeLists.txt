@@ -13,14 +13,19 @@ include_directories( ./include/ )
 #add_executable( interbyte ./src/interbyte.cpp )
 #add_executable( teste ./src/teste.cpp )
 #add_executable( token ./src/token.cpp )
-#add_executable( led ./src/led.cpp )
 #add_executable( parse ./src/parser.cpp )
+add_executable( led ./src/examples/led.cpp )
+add_executable( sensor ./src/examples/sensor.cpp )
 
 #bibliotecas
-add_library(messenger2 SHARED ./src/CmdMessenger.cpp ./src/CmdBase.cpp ./src/CmdSend.cpp ./src/CmdReceived.cpp)
-target_link_libraries(messenger2 serial)
+add_library(messenger SHARED ./src/CmdMessenger.cpp ./src/CmdBase.cpp ./src/CmdSend.cpp ./src/CmdReceived.cpp)
+target_link_libraries(messenger serial)
 
 #target_link_libraries( hello serial )
 #target_link_libraries( interbyte serial )
 #target_link_libraries( teste serial )
-#target_link_libraries( led messenger2 )
+target_link_libraries( led messenger )
+target_link_libraries( sensor messenger )
+
+install(TARGETS messenger DESTINATION lib)
+install(FILES include/CmdBase.h include/CmdMessenger.h include/CmdReceived.h  include/CmdSend.h DESTINATION include/CmdMessenger)

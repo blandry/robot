@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/led.dir/src/led.cpp.o"
+  "CMakeFiles/led.dir/src/examples/led.cpp.o"
   "led.pdb"
   "led"
 )

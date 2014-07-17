@@ -72,6 +72,13 @@ flowcontrol\+\_\+t \hyperlink{classcmd_1_1_cmd_messenger_a11e2bea7282a912fd05644
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 92 of file Cmd\+Messenger.\+h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classcmd_1_1_cmd_messenger_aba80ae7cc283a24b7afa08c18f89af0f}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!Cmd\+Messenger@{Cmd\+Messenger}}
 \index{Cmd\+Messenger@{Cmd\+Messenger}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
@@ -120,6 +127,10 @@ Creates a \hyperlink{classcmd_1_1_cmd_messenger}{Cmd\+Messenger} object and conf
 {\em flowcontrol} & Type of flowcontrol used, the default is flowcontrol\+\_\+none, possible values are\+: flowcontrol\+\_\+none, flowcontrol\+\_\+hardware and flowcontrol\+\_\+software. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 25 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_aa92b483212121faffeb02b7a63450ad0}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!````~Cmd\+Messenger@{$\sim$\+Cmd\+Messenger}}
 \index{````~Cmd\+Messenger@{$\sim$\+Cmd\+Messenger}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{$\sim$\+Cmd\+Messenger}]{\setlength{\rightskip}{0pt plus 5cm}Cmd\+Messenger\+::$\sim$\+Cmd\+Messenger (
@@ -127,6 +138,10 @@ Creates a \hyperlink{classcmd_1_1_cmd_messenger}{Cmd\+Messenger} object and conf
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classcmd_1_1_cmd_messenger_aa92b483212121faffeb02b7a63450ad0}
+Destructor 
+
+Definition at line 43 of file Cmd\+Messenger.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
@@ -144,6 +159,10 @@ Attaches a default callback for commands without a specific callback
 {\em callback} & A function of type 'void func(\+Cmd\+Received\&)' \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 81 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_abbc2aa2a6bc95960215eeaa88c4533a4}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!attach@{attach}}
 \index{attach@{attach}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{attach}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::attach (
@@ -159,6 +178,10 @@ Attaches a callback to a command.
 {\em callback} & Callback to attach. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 86 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a3a08819cae57dd6c9f7515ebae923696}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!close@{close}}
 \index{close@{close}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::close (
@@ -166,20 +189,32 @@ Attaches a callback to a command.
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_a3a08819cae57dd6c9f7515ebae923696}
-Closes the serial port \hypertarget{classcmd_1_1_cmd_messenger_a77bde87787bd2da58e1ecc523d4c1a90}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!feed\+In\+Serial\+Data@{feed\+In\+Serial\+Data}}
+Closes the serial port 
+
+Definition at line 127 of file Cmd\+Messenger.\+cpp.
+
+\hypertarget{classcmd_1_1_cmd_messenger_a77bde87787bd2da58e1ecc523d4c1a90}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!feed\+In\+Serial\+Data@{feed\+In\+Serial\+Data}}
 \index{feed\+In\+Serial\+Data@{feed\+In\+Serial\+Data}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{feed\+In\+Serial\+Data}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::feed\+In\+Serial\+Data (
 \begin{DoxyParamCaption}
 \item[{int}]{num\+\_\+commands}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_a77bde87787bd2da58e1ecc523d4c1a90}
-Feeds in the serial data. That means, the commands in the buffer will be read and callbacks are gonna be called. \hypertarget{classcmd_1_1_cmd_messenger_a14c580579b5311ff78cce8de34fe63b2}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Baudrate@{get\+Baudrate}}
+Feeds in the serial data. That means, the commands in the buffer will be read and callbacks are gonna be called. 
+
+Definition at line 91 of file Cmd\+Messenger.\+cpp.
+
+\hypertarget{classcmd_1_1_cmd_messenger_a14c580579b5311ff78cce8de34fe63b2}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Baudrate@{get\+Baudrate}}
 \index{get\+Baudrate@{get\+Baudrate}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Baudrate}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Cmd\+Messenger\+::get\+Baudrate (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classcmd_1_1_cmd_messenger_a14c580579b5311ff78cce8de34fe63b2}
+
+
+Definition at line 189 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a8ccc24a1f621afd1e114696ed9b8b261}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Byte\+Size@{get\+Byte\+Size}}
 \index{get\+Byte\+Size@{get\+Byte\+Size}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Byte\+Size}]{\setlength{\rightskip}{0pt plus 5cm}bytesize\+\_\+t Cmd\+Messenger\+::get\+Byte\+Size (
@@ -187,6 +222,10 @@ Feeds in the serial data. That means, the commands in the buffer will be read an
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classcmd_1_1_cmd_messenger_a8ccc24a1f621afd1e114696ed9b8b261}
+
+
+Definition at line 199 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_acfa9dda9411bc8943973abd5f5f6156f}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Cmd\+Sep@{get\+Cmd\+Sep}}
 \index{get\+Cmd\+Sep@{get\+Cmd\+Sep}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Cmd\+Sep}]{\setlength{\rightskip}{0pt plus 5cm}char Cmd\+Messenger\+::get\+Cmd\+Sep (
@@ -202,6 +241,10 @@ A character that sets the command separator.
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classcmd_1_1_cmd_messenger_afebb6b63ae64c661b680597ef29bc879}{Cmd\+Messenger\+::set\+Cmd\+Sep} 
 \end{DoxySeeAlso}
+
+
+Definition at line 149 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_adf36d1a1b153793d9bf33f14b26167a5}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Esc\+Char@{get\+Esc\+Char}}
 \index{get\+Esc\+Char@{get\+Esc\+Char}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Esc\+Char}]{\setlength{\rightskip}{0pt plus 5cm}char Cmd\+Messenger\+::get\+Esc\+Char (
@@ -217,6 +260,10 @@ A character that sets the escape character.
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classcmd_1_1_cmd_messenger_ada69819065773ffc3c4923517321d6e5}{Cmd\+Messenger\+::set\+Esc\+Char} 
 \end{DoxySeeAlso}
+
+
+Definition at line 159 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a84895ecc82e2302891b119887944a308}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Field\+Sep@{get\+Field\+Sep}}
 \index{get\+Field\+Sep@{get\+Field\+Sep}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Field\+Sep}]{\setlength{\rightskip}{0pt plus 5cm}char Cmd\+Messenger\+::get\+Field\+Sep (
@@ -232,6 +279,10 @@ A character that sets the field separator.
 \begin{DoxySeeAlso}{See also}
 \hyperlink{classcmd_1_1_cmd_messenger_af83fbed5873f5e517a0432438dd7c873}{Cmd\+Messenger\+::set\+Field\+Sep} 
 \end{DoxySeeAlso}
+
+
+Definition at line 139 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a11e2bea7282a912fd05644b403b55503}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Flow\+Control@{get\+Flow\+Control}}
 \index{get\+Flow\+Control@{get\+Flow\+Control}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Flow\+Control}]{\setlength{\rightskip}{0pt plus 5cm}flowcontrol\+\_\+t Cmd\+Messenger\+::get\+Flow\+Control (
@@ -239,6 +290,10 @@ A character that sets the field separator.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classcmd_1_1_cmd_messenger_a11e2bea7282a912fd05644b403b55503}
+
+
+Definition at line 229 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_ad487f6fd40a2bffc69fab5334d96ab52}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Parity@{get\+Parity}}
 \index{get\+Parity@{get\+Parity}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Parity}]{\setlength{\rightskip}{0pt plus 5cm}parity\+\_\+t Cmd\+Messenger\+::get\+Parity (
@@ -246,6 +301,10 @@ A character that sets the field separator.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classcmd_1_1_cmd_messenger_ad487f6fd40a2bffc69fab5334d96ab52}
+
+
+Definition at line 209 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_ab2ebaaabdfeb83decbc868b556a1ea0b}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Port@{get\+Port}}
 \index{get\+Port@{get\+Port}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Port}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cmd\+Messenger\+::get\+Port (
@@ -263,6 +322,10 @@ A std\+::string representing the serial port.
 {\em std\+::invalid\+\_\+argument} & \\
 \hline
 \end{DoxyExceptions}
+
+
+Definition at line 179 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a2dd6e45584ed65ff1f744e46198e7755}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Stop\+Bits@{get\+Stop\+Bits}}
 \index{get\+Stop\+Bits@{get\+Stop\+Bits}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Stop\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}stopbits\+\_\+t Cmd\+Messenger\+::get\+Stop\+Bits (
@@ -270,6 +333,10 @@ A std\+::string representing the serial port.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classcmd_1_1_cmd_messenger_a2dd6e45584ed65ff1f744e46198e7755}
+
+
+Definition at line 219 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a6b8a4f763475a9e4fbef2237f1050849}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!get\+Timeout@{get\+Timeout}}
 \index{get\+Timeout@{get\+Timeout}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{get\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}Timeout cmd\+::\+Cmd\+Messenger\+::get\+Timeout (
@@ -284,6 +351,10 @@ A std\+::string representing the serial port.
 {}
 \end{DoxyParamCaption}
 ) const}}\label{classcmd_1_1_cmd_messenger_a38dab46f4b3c0c56e8dad6e91b9500c8}
+
+
+Definition at line 122 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_adb4617437e81ccb39b1d314b83db8f6c}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!open@{open}}
 \index{open@{open}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::open (
@@ -302,6 +373,10 @@ Opens the serial port, as long as it is set and not already opened.
 {\em serial\+::\+I\+O\+Exception} & \\
 \hline
 \end{DoxyExceptions}
+
+
+Definition at line 117 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a5ea6815a9c6dad49350396839527e25d}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!send@{send}}
 \index{send@{send}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{send}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\+Messenger\+::send (
@@ -322,9 +397,13 @@ Sends a command. If ack is desired, it will block till the specified command id 
 \hline
 {\em ack\+\_\+id} & The id of the ack command. \\
 \hline
-{\em timeout} & Simple timeout for the ack. If not specified, the timeout already set will be used. Note that this does not change the timeout already set. \\
+{\em simple\+\_\+timeout} & Simple timeout for the ack. If not specified, the timeout already set will be used. Note that this does not change the timeout already set. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 49 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a0fc1bac4fc0d3494893113ade503099b}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Baud\+Rate@{set\+Baud\+Rate}}
 \index{set\+Baud\+Rate@{set\+Baud\+Rate}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Baud\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Baud\+Rate (
@@ -338,9 +417,13 @@ Possible baudrates depends on the system, but some safe baudrates (for arduino a
 
 
 \begin{DoxyParams}{Parameters}
-{\em An} & integer that sets the baudrate. \\
+{\em baudrate} & An integer that sets the baudrate. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 184 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_ae05db8b37c1b2ee9be47ea3a3bf045bd}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Byte\+Size@{set\+Byte\+Size}}
 \index{set\+Byte\+Size@{set\+Byte\+Size}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Byte\+Size}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Byte\+Size (
@@ -348,6 +431,10 @@ Possible baudrates depends on the system, but some safe baudrates (for arduino a
 \item[{bytesize\+\_\+t}]{bytesize}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_ae05db8b37c1b2ee9be47ea3a3bf045bd}
+
+
+Definition at line 194 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_afebb6b63ae64c661b680597ef29bc879}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Cmd\+Sep@{set\+Cmd\+Sep}}
 \index{set\+Cmd\+Sep@{set\+Cmd\+Sep}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Cmd\+Sep}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Cmd\+Sep (
@@ -362,6 +449,10 @@ Sets the command separator, in other words, the character that defines the end o
 {\em cmd\+\_\+separator} & A character that sets the command separator, the default value is ';'. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 144 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_ada69819065773ffc3c4923517321d6e5}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Esc\+Char@{set\+Esc\+Char}}
 \index{set\+Esc\+Char@{set\+Esc\+Char}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Esc\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Esc\+Char (
@@ -376,6 +467,10 @@ Sets the escape character used to escape special characters (like the field and 
 {\em esc\+\_\+character} & A character that sets the escape character, the defaul value is '/'. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 154 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_af83fbed5873f5e517a0432438dd7c873}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Field\+Sep@{set\+Field\+Sep}}
 \index{set\+Field\+Sep@{set\+Field\+Sep}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Field\+Sep}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Field\+Sep (
@@ -390,6 +485,10 @@ Sets the field separator character, i.\+e., the character used to separate comma
 {\em field\+\_\+separator} & A character that sets the field separator, the default value is\+: ','. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 134 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a5271d79b0f4ae95bea5897b214fbbd4c}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Flow\+Control@{set\+Flow\+Control}}
 \index{set\+Flow\+Control@{set\+Flow\+Control}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Flow\+Control}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Flow\+Control (
@@ -397,6 +496,10 @@ Sets the field separator character, i.\+e., the character used to separate comma
 \item[{flowcontrol\+\_\+t}]{flowcontrol}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_a5271d79b0f4ae95bea5897b214fbbd4c}
+
+
+Definition at line 224 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_ae0bbc0b786fadff310f31c84644b56c5}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Parity@{set\+Parity}}
 \index{set\+Parity@{set\+Parity}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Parity}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Parity (
@@ -404,6 +507,10 @@ Sets the field separator character, i.\+e., the character used to separate comma
 \item[{parity\+\_\+t}]{parity}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_ae0bbc0b786fadff310f31c84644b56c5}
+
+
+Definition at line 204 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_ab95dce49fc8845498c71bae25987a923}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Port@{set\+Port}}
 \index{set\+Port@{set\+Port}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Port}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Port (
@@ -422,6 +529,10 @@ Sets the serial port for communication.
 \end{DoxyItemize}\\
 \hline
 \end{DoxyParams}
+
+
+Definition at line 164 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a06eaedc3c9e7b0b3cda7b139ee61f5bb}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Stop\+Bits@{set\+Stop\+Bits}}
 \index{set\+Stop\+Bits@{set\+Stop\+Bits}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Stop\+Bits}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Stop\+Bits (
@@ -429,6 +540,10 @@ Sets the serial port for communication.
 \item[{stopbits\+\_\+t}]{stopbits}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_a06eaedc3c9e7b0b3cda7b139ee61f5bb}
+
+
+Definition at line 214 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a0ccea65cba7a807bdf4c476f8db9289a}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Timeout@{set\+Timeout}}
 \index{set\+Timeout@{set\+Timeout}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Timeout (
@@ -436,6 +551,10 @@ Sets the serial port for communication.
 \item[{Timeout \&}]{timeout}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_a0ccea65cba7a807bdf4c476f8db9289a}
+
+
+Definition at line 169 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a0d628c1961f8d2b96fa7081961f6a0c1}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!set\+Timeout@{set\+Timeout}}
 \index{set\+Timeout@{set\+Timeout}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{set\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Messenger\+::set\+Timeout (
@@ -447,6 +566,10 @@ Sets the serial port for communication.
 \item[{uint32\+\_\+t}]{write\+\_\+timeout\+\_\+multiplier}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_messenger_a0d628c1961f8d2b96fa7081961f6a0c1}
+
+
+Definition at line 174 of file Cmd\+Messenger.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_messenger_a40c20df2763d3af8e59a7c135a82e121}{\index{cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}!wait\+Cmd@{wait\+Cmd}}
 \index{wait\+Cmd@{wait\+Cmd}!cmd\+::\+Cmd\+Messenger@{cmd\+::\+Cmd\+Messenger}}
 \subsubsection[{wait\+Cmd}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\+Messenger\+::wait\+Cmd (
@@ -461,7 +584,13 @@ Waits for an specific command. This is used mainly because some examples, in the
 \begin{DoxyParams}{Parameters}
 {\em cmd\+\_\+id} & The id of the command to be waited for. \\
 \hline
+{\em simple\+\_\+timeout} & Simple timeout to wait for the command. If not specified, the timeout already set will be used. Note that this does not change the timeout already set. \\
+\hline
 \end{DoxyParams}
+
+
+Definition at line 77 of file Cmd\+Messenger.\+cpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

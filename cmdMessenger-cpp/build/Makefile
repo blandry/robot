@@ -60,6 +60,47 @@ edit_cache:
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+.PHONY : install/strip/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -102,45 +143,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cmd_base
-
-# Build rule for target.
-cmd_base: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cmd_base
-.PHONY : cmd_base
-
-# fast build rule for target.
-cmd_base/fast:
-	$(MAKE) -f CMakeFiles/cmd_base.dir/build.make CMakeFiles/cmd_base.dir/build
-.PHONY : cmd_base/fast
-
-#=============================================================================
-# Target rules for targets named cmd_received
-
-# Build rule for target.
-cmd_received: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cmd_received
-.PHONY : cmd_received
-
-# fast build rule for target.
-cmd_received/fast:
-	$(MAKE) -f CMakeFiles/cmd_received.dir/build.make CMakeFiles/cmd_received.dir/build
-.PHONY : cmd_received/fast
-
-#=============================================================================
-# Target rules for targets named cmd_send
-
-# Build rule for target.
-cmd_send: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cmd_send
-.PHONY : cmd_send
-
-# fast build rule for target.
-cmd_send/fast:
-	$(MAKE) -f CMakeFiles/cmd_send.dir/build.make CMakeFiles/cmd_send.dir/build
-.PHONY : cmd_send/fast
-
-#=============================================================================
 # Target rules for targets named led
 
 # Build rule for target.
@@ -167,64 +169,24 @@ messenger/fast:
 .PHONY : messenger/fast
 
 #=============================================================================
-# Target rules for targets named messenger2
+# Target rules for targets named sensor
 
 # Build rule for target.
-messenger2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 messenger2
-.PHONY : messenger2
+sensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor
+.PHONY : sensor
 
 # fast build rule for target.
-messenger2/fast:
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/build
-.PHONY : messenger2/fast
-
-#=============================================================================
-# Target rules for targets named parse
-
-# Build rule for target.
-parse: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 parse
-.PHONY : parse
-
-# fast build rule for target.
-parse/fast:
-	$(MAKE) -f CMakeFiles/parse.dir/build.make CMakeFiles/parse.dir/build
-.PHONY : parse/fast
-
-#=============================================================================
-# Target rules for targets named teste
-
-# Build rule for target.
-teste: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 teste
-.PHONY : teste
-
-# fast build rule for target.
-teste/fast:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/build
-.PHONY : teste/fast
-
-#=============================================================================
-# Target rules for targets named token
-
-# Build rule for target.
-token: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 token
-.PHONY : token
-
-# fast build rule for target.
-token/fast:
-	$(MAKE) -f CMakeFiles/token.dir/build.make CMakeFiles/token.dir/build
-.PHONY : token/fast
+sensor/fast:
+	$(MAKE) -f CMakeFiles/sensor.dir/build.make CMakeFiles/sensor.dir/build
+.PHONY : sensor/fast
 
 src/CmdBase.o: src/CmdBase.cpp.o
 .PHONY : src/CmdBase.o
 
 # target to build an object file
 src/CmdBase.cpp.o:
-	$(MAKE) -f CMakeFiles/cmd_base.dir/build.make CMakeFiles/cmd_base.dir/src/CmdBase.cpp.o
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdBase.cpp.o
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdBase.cpp.o
 .PHONY : src/CmdBase.cpp.o
 
 src/CmdBase.i: src/CmdBase.cpp.i
@@ -232,8 +194,7 @@ src/CmdBase.i: src/CmdBase.cpp.i
 
 # target to preprocess a source file
 src/CmdBase.cpp.i:
-	$(MAKE) -f CMakeFiles/cmd_base.dir/build.make CMakeFiles/cmd_base.dir/src/CmdBase.cpp.i
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdBase.cpp.i
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdBase.cpp.i
 .PHONY : src/CmdBase.cpp.i
 
 src/CmdBase.s: src/CmdBase.cpp.s
@@ -241,8 +202,7 @@ src/CmdBase.s: src/CmdBase.cpp.s
 
 # target to generate assembly for a file
 src/CmdBase.cpp.s:
-	$(MAKE) -f CMakeFiles/cmd_base.dir/build.make CMakeFiles/cmd_base.dir/src/CmdBase.cpp.s
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdBase.cpp.s
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdBase.cpp.s
 .PHONY : src/CmdBase.cpp.s
 
 src/CmdMessenger.o: src/CmdMessenger.cpp.o
@@ -251,7 +211,6 @@ src/CmdMessenger.o: src/CmdMessenger.cpp.o
 # target to build an object file
 src/CmdMessenger.cpp.o:
 	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdMessenger.cpp.o
 .PHONY : src/CmdMessenger.cpp.o
 
 src/CmdMessenger.i: src/CmdMessenger.cpp.i
@@ -260,7 +219,6 @@ src/CmdMessenger.i: src/CmdMessenger.cpp.i
 # target to preprocess a source file
 src/CmdMessenger.cpp.i:
 	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdMessenger.cpp.i
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdMessenger.cpp.i
 .PHONY : src/CmdMessenger.cpp.i
 
 src/CmdMessenger.s: src/CmdMessenger.cpp.s
@@ -269,7 +227,6 @@ src/CmdMessenger.s: src/CmdMessenger.cpp.s
 # target to generate assembly for a file
 src/CmdMessenger.cpp.s:
 	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdMessenger.cpp.s
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdMessenger.cpp.s
 .PHONY : src/CmdMessenger.cpp.s
 
 src/CmdReceived.o: src/CmdReceived.cpp.o
@@ -277,8 +234,7 @@ src/CmdReceived.o: src/CmdReceived.cpp.o
 
 # target to build an object file
 src/CmdReceived.cpp.o:
-	$(MAKE) -f CMakeFiles/cmd_received.dir/build.make CMakeFiles/cmd_received.dir/src/CmdReceived.cpp.o
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdReceived.cpp.o
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdReceived.cpp.o
 .PHONY : src/CmdReceived.cpp.o
 
 src/CmdReceived.i: src/CmdReceived.cpp.i
@@ -286,8 +242,7 @@ src/CmdReceived.i: src/CmdReceived.cpp.i
 
 # target to preprocess a source file
 src/CmdReceived.cpp.i:
-	$(MAKE) -f CMakeFiles/cmd_received.dir/build.make CMakeFiles/cmd_received.dir/src/CmdReceived.cpp.i
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdReceived.cpp.i
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdReceived.cpp.i
 .PHONY : src/CmdReceived.cpp.i
 
 src/CmdReceived.s: src/CmdReceived.cpp.s
@@ -295,8 +250,7 @@ src/CmdReceived.s: src/CmdReceived.cpp.s
 
 # target to generate assembly for a file
 src/CmdReceived.cpp.s:
-	$(MAKE) -f CMakeFiles/cmd_received.dir/build.make CMakeFiles/cmd_received.dir/src/CmdReceived.cpp.s
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdReceived.cpp.s
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdReceived.cpp.s
 .PHONY : src/CmdReceived.cpp.s
 
 src/CmdSend.o: src/CmdSend.cpp.o
@@ -304,8 +258,7 @@ src/CmdSend.o: src/CmdSend.cpp.o
 
 # target to build an object file
 src/CmdSend.cpp.o:
-	$(MAKE) -f CMakeFiles/cmd_send.dir/build.make CMakeFiles/cmd_send.dir/src/CmdSend.cpp.o
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdSend.cpp.o
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdSend.cpp.o
 .PHONY : src/CmdSend.cpp.o
 
 src/CmdSend.i: src/CmdSend.cpp.i
@@ -313,8 +266,7 @@ src/CmdSend.i: src/CmdSend.cpp.i
 
 # target to preprocess a source file
 src/CmdSend.cpp.i:
-	$(MAKE) -f CMakeFiles/cmd_send.dir/build.make CMakeFiles/cmd_send.dir/src/CmdSend.cpp.i
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdSend.cpp.i
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdSend.cpp.i
 .PHONY : src/CmdSend.cpp.i
 
 src/CmdSend.s: src/CmdSend.cpp.s
@@ -322,105 +274,56 @@ src/CmdSend.s: src/CmdSend.cpp.s
 
 # target to generate assembly for a file
 src/CmdSend.cpp.s:
-	$(MAKE) -f CMakeFiles/cmd_send.dir/build.make CMakeFiles/cmd_send.dir/src/CmdSend.cpp.s
-	$(MAKE) -f CMakeFiles/messenger2.dir/build.make CMakeFiles/messenger2.dir/src/CmdSend.cpp.s
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdSend.cpp.s
 .PHONY : src/CmdSend.cpp.s
 
-src/led.o: src/led.cpp.o
-.PHONY : src/led.o
+src/examples/led.o: src/examples/led.cpp.o
+.PHONY : src/examples/led.o
 
 # target to build an object file
-src/led.cpp.o:
-	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/led.cpp.o
-.PHONY : src/led.cpp.o
+src/examples/led.cpp.o:
+	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/examples/led.cpp.o
+.PHONY : src/examples/led.cpp.o
 
-src/led.i: src/led.cpp.i
-.PHONY : src/led.i
+src/examples/led.i: src/examples/led.cpp.i
+.PHONY : src/examples/led.i
 
 # target to preprocess a source file
-src/led.cpp.i:
-	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/led.cpp.i
-.PHONY : src/led.cpp.i
+src/examples/led.cpp.i:
+	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/examples/led.cpp.i
+.PHONY : src/examples/led.cpp.i
 
-src/led.s: src/led.cpp.s
-.PHONY : src/led.s
+src/examples/led.s: src/examples/led.cpp.s
+.PHONY : src/examples/led.s
 
 # target to generate assembly for a file
-src/led.cpp.s:
-	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/led.cpp.s
-.PHONY : src/led.cpp.s
+src/examples/led.cpp.s:
+	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/examples/led.cpp.s
+.PHONY : src/examples/led.cpp.s
 
-src/parser.o: src/parser.cpp.o
-.PHONY : src/parser.o
+src/examples/sensor.o: src/examples/sensor.cpp.o
+.PHONY : src/examples/sensor.o
 
 # target to build an object file
-src/parser.cpp.o:
-	$(MAKE) -f CMakeFiles/parse.dir/build.make CMakeFiles/parse.dir/src/parser.cpp.o
-.PHONY : src/parser.cpp.o
+src/examples/sensor.cpp.o:
+	$(MAKE) -f CMakeFiles/sensor.dir/build.make CMakeFiles/sensor.dir/src/examples/sensor.cpp.o
+.PHONY : src/examples/sensor.cpp.o
 
-src/parser.i: src/parser.cpp.i
-.PHONY : src/parser.i
-
-# target to preprocess a source file
-src/parser.cpp.i:
-	$(MAKE) -f CMakeFiles/parse.dir/build.make CMakeFiles/parse.dir/src/parser.cpp.i
-.PHONY : src/parser.cpp.i
-
-src/parser.s: src/parser.cpp.s
-.PHONY : src/parser.s
-
-# target to generate assembly for a file
-src/parser.cpp.s:
-	$(MAKE) -f CMakeFiles/parse.dir/build.make CMakeFiles/parse.dir/src/parser.cpp.s
-.PHONY : src/parser.cpp.s
-
-src/teste.o: src/teste.cpp.o
-.PHONY : src/teste.o
-
-# target to build an object file
-src/teste.cpp.o:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/teste.cpp.o
-.PHONY : src/teste.cpp.o
-
-src/teste.i: src/teste.cpp.i
-.PHONY : src/teste.i
+src/examples/sensor.i: src/examples/sensor.cpp.i
+.PHONY : src/examples/sensor.i
 
 # target to preprocess a source file
-src/teste.cpp.i:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/teste.cpp.i
-.PHONY : src/teste.cpp.i
+src/examples/sensor.cpp.i:
+	$(MAKE) -f CMakeFiles/sensor.dir/build.make CMakeFiles/sensor.dir/src/examples/sensor.cpp.i
+.PHONY : src/examples/sensor.cpp.i
 
-src/teste.s: src/teste.cpp.s
-.PHONY : src/teste.s
-
-# target to generate assembly for a file
-src/teste.cpp.s:
-	$(MAKE) -f CMakeFiles/teste.dir/build.make CMakeFiles/teste.dir/src/teste.cpp.s
-.PHONY : src/teste.cpp.s
-
-src/token.o: src/token.cpp.o
-.PHONY : src/token.o
-
-# target to build an object file
-src/token.cpp.o:
-	$(MAKE) -f CMakeFiles/token.dir/build.make CMakeFiles/token.dir/src/token.cpp.o
-.PHONY : src/token.cpp.o
-
-src/token.i: src/token.cpp.i
-.PHONY : src/token.i
-
-# target to preprocess a source file
-src/token.cpp.i:
-	$(MAKE) -f CMakeFiles/token.dir/build.make CMakeFiles/token.dir/src/token.cpp.i
-.PHONY : src/token.cpp.i
-
-src/token.s: src/token.cpp.s
-.PHONY : src/token.s
+src/examples/sensor.s: src/examples/sensor.cpp.s
+.PHONY : src/examples/sensor.s
 
 # target to generate assembly for a file
-src/token.cpp.s:
-	$(MAKE) -f CMakeFiles/token.dir/build.make CMakeFiles/token.dir/src/token.cpp.s
-.PHONY : src/token.cpp.s
+src/examples/sensor.cpp.s:
+	$(MAKE) -f CMakeFiles/sensor.dir/build.make CMakeFiles/sensor.dir/src/examples/sensor.cpp.s
+.PHONY : src/examples/sensor.cpp.s
 
 # Help Target
 help:
@@ -428,17 +331,15 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... cmd_base"
-	@echo "... cmd_received"
-	@echo "... cmd_send"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... led"
+	@echo "... list_install_components"
 	@echo "... messenger"
-	@echo "... messenger2"
-	@echo "... parse"
 	@echo "... rebuild_cache"
-	@echo "... teste"
-	@echo "... token"
+	@echo "... sensor"
 	@echo "... src/CmdBase.o"
 	@echo "... src/CmdBase.i"
 	@echo "... src/CmdBase.s"
@@ -451,18 +352,12 @@ help:
 	@echo "... src/CmdSend.o"
 	@echo "... src/CmdSend.i"
 	@echo "... src/CmdSend.s"
-	@echo "... src/led.o"
-	@echo "... src/led.i"
-	@echo "... src/led.s"
-	@echo "... src/parser.o"
-	@echo "... src/parser.i"
-	@echo "... src/parser.s"
-	@echo "... src/teste.o"
-	@echo "... src/teste.i"
-	@echo "... src/teste.s"
-	@echo "... src/token.o"
-	@echo "... src/token.i"
-	@echo "... src/token.s"
+	@echo "... src/examples/led.o"
+	@echo "... src/examples/led.i"
+	@echo "... src/examples/led.s"
+	@echo "... src/examples/sensor.o"
+	@echo "... src/examples/sensor.i"
+	@echo "... src/examples/sensor.s"
 .PHONY : help
 
 

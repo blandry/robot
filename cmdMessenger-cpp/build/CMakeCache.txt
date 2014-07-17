@@ -189,7 +189,7 @@ cmd_send_LIB_DEPENDS:STATIC=general;cmd_base;
 messenger2_LIB_DEPENDS:STATIC=general;serial;
 
 //Dependencies for the target
-messenger_LIB_DEPENDS:STATIC=general;serial;general;cmd_send;general;cmd_received;
+messenger_LIB_DEPENDS:STATIC=general;serial;
 
 
 ########################

@@ -30,7 +30,7 @@
  *  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  * \section DESCRIPTION
- * This class provides an easy interface for manipulating commands to be sent. It has the << operator overloaded, for simple addition of arguments in a command.
+ * This is the interface of the class that provides an easy interface for manipulating commands to be sent. It has the << operator overloaded, for simple addition of arguments in a command.
  * Note that to finish a command you should add as argument an instance of the CmdEnd class.
  */
 
@@ -83,6 +83,11 @@ namespace cmd{
 
       /*----------GETTERS----------*/
 
+      /*!
+       * Gets the state of the command.
+       *
+       * \return A bool that represents the state. True if the command is ready to be sent and false if it is not.
+       */
       bool getState() const; 
       int getNumArgs() const;
 

@@ -1,2 +1,1 @@
-/usr/bin/ar cr libmessenger.a  CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o
-/usr/bin/ranlib libmessenger.a
+/usr/bin/c++  -fPIC    -shared -Wl,-soname,libmessenger.so -o libmessenger.so CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o CMakeFiles/messenger.dir/src/CmdBase.cpp.o CMakeFiles/messenger.dir/src/CmdSend.cpp.o CMakeFiles/messenger.dir/src/CmdReceived.cpp.o -lserial 

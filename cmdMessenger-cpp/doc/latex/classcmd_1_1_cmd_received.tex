@@ -48,6 +48,13 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+
+
+Definition at line 46 of file Cmd\+Received.\+h.
+
+
+
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{classcmd_1_1_cmd_received_a4e2d67c5a9de708c11c35a5ea2b5868a}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!Cmd\+Received@{Cmd\+Received}}
 \index{Cmd\+Received@{Cmd\+Received}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
@@ -59,6 +66,10 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \item[{const char}]{esc\+\_\+character = {\ttfamily '/'}}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a4e2d67c5a9de708c11c35a5ea2b5868a}
+
+
+Definition at line 15 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_aae3a60edebca81eccf26c132abd334bd}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!````~Cmd\+Received@{$\sim$\+Cmd\+Received}}
 \index{````~Cmd\+Received@{$\sim$\+Cmd\+Received}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{$\sim$\+Cmd\+Received}]{\setlength{\rightskip}{0pt plus 5cm}Cmd\+Received\+::$\sim$\+Cmd\+Received (
@@ -66,6 +77,10 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classcmd_1_1_cmd_received_aae3a60edebca81eccf26c132abd334bd}
+
+
+Definition at line 61 of file Cmd\+Received.\+cpp.
+
 
 
 \subsection{Member Function Documentation}
@@ -76,6 +91,15 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}
+Get the number of arguments left in the queue.
+
+\begin{DoxyReturn}{Returns}
+An int representing the number of arguments left. 
+\end{DoxyReturn}
+
+
+Definition at line 250 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_aff6110aee1a7f6f4f4c0d1542e6cec44}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!is\+Valid@{is\+Valid}}
 \index{is\+Valid@{is\+Valid}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{is\+Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\+Received\+::is\+Valid (
@@ -83,6 +107,15 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_aff6110aee1a7f6f4f4c0d1542e6cec44}
+Verifies the validity of the received command.
+
+\begin{DoxyReturn}{Returns}
+A boolean. True if the command is valid and false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 245 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a09f6f7766f89968785c3525e3ce8a625}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Bool@{parse\+Bool}}
 \index{parse\+Bool@{parse\+Bool}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Bool}]{\setlength{\rightskip}{0pt plus 5cm}bool Cmd\+Received\+::parse\+Bool (
@@ -90,6 +123,10 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a09f6f7766f89968785c3525e3ce8a625}
+
+
+Definition at line 67 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a5f2ae1ffa5dd5312ec12c6e9a46ff24b}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Bool@{parse\+Bool}}
 \index{parse\+Bool@{parse\+Bool}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Bool}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Received\+::parse\+Bool (
@@ -97,6 +134,17 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \item[{bool \&}]{arg}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a5f2ae1ffa5dd5312ec12c6e9a46ff24b}
+Parses the next argument as a bool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Reference of a bool to receive the parsed argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a7f97a4443af5819d8bcd69e5c51cc4f0}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Char@{parse\+Char}}
 \index{parse\+Char@{parse\+Char}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Char}]{\setlength{\rightskip}{0pt plus 5cm}char Cmd\+Received\+::parse\+Char (
@@ -104,6 +152,15 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a7f97a4443af5819d8bcd69e5c51cc4f0}
+Parses the next argument as a character.
+
+\begin{DoxyReturn}{Returns}
+A character representing the parsed argument. 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a842709f94d709973b62bbd74320825a5}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Char@{parse\+Char}}
 \index{parse\+Char@{parse\+Char}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Char}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Received\+::parse\+Char (
@@ -111,6 +168,17 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \item[{char \&}]{arg}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a842709f94d709973b62bbd74320825a5}
+Parses the next argument as a character.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Reference of a character to receive the parsed argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 156 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a181d947566bb4a9e21725a4e99588c1f}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Double@{parse\+Double}}
 \index{parse\+Double@{parse\+Double}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Double}]{\setlength{\rightskip}{0pt plus 5cm}double Cmd\+Received\+::parse\+Double (
@@ -118,6 +186,15 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a181d947566bb4a9e21725a4e99588c1f}
+Parses the next argument as a double.
+
+\begin{DoxyReturn}{Returns}
+A double representing the parsed argument. 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a8866107ea61e761416948066b428e54f}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Double@{parse\+Double}}
 \index{parse\+Double@{parse\+Double}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Double}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Received\+::parse\+Double (
@@ -125,6 +202,17 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \item[{double \&}]{arg}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a8866107ea61e761416948066b428e54f}
+Parses the next argument as a double.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Reference of a double to receive the parsed argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 217 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_ac29ede9c4b16e3a768b942a602c72f30}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Float@{parse\+Float}}
 \index{parse\+Float@{parse\+Float}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Float}]{\setlength{\rightskip}{0pt plus 5cm}float Cmd\+Received\+::parse\+Float (
@@ -132,6 +220,15 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_ac29ede9c4b16e3a768b942a602c72f30}
+Parses the next argument as a float.
+
+\begin{DoxyReturn}{Returns}
+A float representing the parsed argument. 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a6194b57482cf2f9e235821f03c364496}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Float@{parse\+Float}}
 \index{parse\+Float@{parse\+Float}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Float}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Received\+::parse\+Float (
@@ -139,6 +236,12 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \item[{float \&}]{arg}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a6194b57482cf2f9e235821f03c364496}
+Parses the next argument as a float.
+
+arg Reference of a float to receive the parsed argument. 
+
+Definition at line 188 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a267e265e7bdf5f5e45c1153d78ca0223}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Int@{parse\+Int}}
 \index{parse\+Int@{parse\+Int}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Int}]{\setlength{\rightskip}{0pt plus 5cm}int Cmd\+Received\+::parse\+Int (
@@ -146,6 +249,15 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a267e265e7bdf5f5e45c1153d78ca0223}
+Parses the next argument as an integer.
+
+\begin{DoxyReturn}{Returns}
+An integer representing the parsed argument. 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_a8bb8b048253bee5f092d9edd67f8b981}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+Int@{parse\+Int}}
 \index{parse\+Int@{parse\+Int}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+Int}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Received\+::parse\+Int (
@@ -153,6 +265,17 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \item[{int \&}]{arg}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_a8bb8b048253bee5f092d9edd67f8b981}
+Parses the next argument as an integer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Reference of an integer to receive the parsed argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 121 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_adf3bc587f2a9b3007b4a5e447116a871}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+String@{parse\+String}}
 \index{parse\+String@{parse\+String}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Cmd\+Received\+::parse\+String (
@@ -160,6 +283,15 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 {}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_adf3bc587f2a9b3007b4a5e447116a871}
+Parses the next argument as a String.
+
+\begin{DoxyReturn}{Returns}
+A std\+::string representing the parsed argument. 
+\end{DoxyReturn}
+
+
+Definition at line 229 of file Cmd\+Received.\+cpp.
+
 \hypertarget{classcmd_1_1_cmd_received_ad0a14bef5f41acdbe3dba8369fdc015a}{\index{cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}!parse\+String@{parse\+String}}
 \index{parse\+String@{parse\+String}!cmd\+::\+Cmd\+Received@{cmd\+::\+Cmd\+Received}}
 \subsubsection[{parse\+String}]{\setlength{\rightskip}{0pt plus 5cm}void Cmd\+Received\+::parse\+String (
@@ -167,6 +299,17 @@ int \hyperlink{classcmd_1_1_cmd_received_af5b660106fb59805494bbb733d1ca5ff}{get\
 \item[{std\+::string \&}]{arg}
 \end{DoxyParamCaption}
 )}}\label{classcmd_1_1_cmd_received_ad0a14bef5f41acdbe3dba8369fdc015a}
+Parses the next argument as a String.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg} & Reference of a std\+::string to receive the parsed argument. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 237 of file Cmd\+Received.\+cpp.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

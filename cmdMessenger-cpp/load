@@ -1,0 +1,31 @@
+#!/bin/bash
+
+mkdir _temp
+
+SPACE=$(pwd)
+
+cp -r ./doc/html/* -t ./_temp/
+
+cd _temp/
+
+for j in $(ls -1 _*); do
+  string=${j#"_"}
+  grep -rl $j ./ | xargs sed -i "s/$j/$string/g"
+
+  mv $j $string
+done
+
+cd $SPACE
+
+rm -r ../html/robot/CmdMessenger/*
+cp -r ./_temp/* -t ../html/robot/CmdMessenger
+
+cd ../html/robot/
+
+git add CmdMessenger/
+git commit -m "automatically loaded documentation"
+git push origin gh-pages
+
+cd $SPACE
+
+rm -r _temp

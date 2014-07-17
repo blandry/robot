@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 
       cout << "feeding in serial data\n";
 
-      arduino.feedInSerialData(10);
+      arduino.feedInSerialData();
 
     }
 
@@ -86,3 +86,5 @@ int main(int argc, char *argv[])
 
   return 0;
 }
+
+//! \endcode

@@ -75,25 +75,102 @@ CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o.provides: CMakeFiles/messenger.d
 
 CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o.provides.build: CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o
 
+CMakeFiles/messenger.dir/src/CmdBase.cpp.o: CMakeFiles/messenger.dir/flags.make
+CMakeFiles/messenger.dir/src/CmdBase.cpp.o: ../src/CmdBase.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/edno/projetos/robot/cmdMessenger-cpp/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/messenger.dir/src/CmdBase.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/messenger.dir/src/CmdBase.cpp.o -c /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdBase.cpp
+
+CMakeFiles/messenger.dir/src/CmdBase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/messenger.dir/src/CmdBase.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdBase.cpp > CMakeFiles/messenger.dir/src/CmdBase.cpp.i
+
+CMakeFiles/messenger.dir/src/CmdBase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/messenger.dir/src/CmdBase.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdBase.cpp -o CMakeFiles/messenger.dir/src/CmdBase.cpp.s
+
+CMakeFiles/messenger.dir/src/CmdBase.cpp.o.requires:
+.PHONY : CMakeFiles/messenger.dir/src/CmdBase.cpp.o.requires
+
+CMakeFiles/messenger.dir/src/CmdBase.cpp.o.provides: CMakeFiles/messenger.dir/src/CmdBase.cpp.o.requires
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdBase.cpp.o.provides.build
+.PHONY : CMakeFiles/messenger.dir/src/CmdBase.cpp.o.provides
+
+CMakeFiles/messenger.dir/src/CmdBase.cpp.o.provides.build: CMakeFiles/messenger.dir/src/CmdBase.cpp.o
+
+CMakeFiles/messenger.dir/src/CmdSend.cpp.o: CMakeFiles/messenger.dir/flags.make
+CMakeFiles/messenger.dir/src/CmdSend.cpp.o: ../src/CmdSend.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/edno/projetos/robot/cmdMessenger-cpp/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/messenger.dir/src/CmdSend.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/messenger.dir/src/CmdSend.cpp.o -c /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdSend.cpp
+
+CMakeFiles/messenger.dir/src/CmdSend.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/messenger.dir/src/CmdSend.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdSend.cpp > CMakeFiles/messenger.dir/src/CmdSend.cpp.i
+
+CMakeFiles/messenger.dir/src/CmdSend.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/messenger.dir/src/CmdSend.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdSend.cpp -o CMakeFiles/messenger.dir/src/CmdSend.cpp.s
+
+CMakeFiles/messenger.dir/src/CmdSend.cpp.o.requires:
+.PHONY : CMakeFiles/messenger.dir/src/CmdSend.cpp.o.requires
+
+CMakeFiles/messenger.dir/src/CmdSend.cpp.o.provides: CMakeFiles/messenger.dir/src/CmdSend.cpp.o.requires
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdSend.cpp.o.provides.build
+.PHONY : CMakeFiles/messenger.dir/src/CmdSend.cpp.o.provides
+
+CMakeFiles/messenger.dir/src/CmdSend.cpp.o.provides.build: CMakeFiles/messenger.dir/src/CmdSend.cpp.o
+
+CMakeFiles/messenger.dir/src/CmdReceived.cpp.o: CMakeFiles/messenger.dir/flags.make
+CMakeFiles/messenger.dir/src/CmdReceived.cpp.o: ../src/CmdReceived.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/edno/projetos/robot/cmdMessenger-cpp/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/messenger.dir/src/CmdReceived.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/messenger.dir/src/CmdReceived.cpp.o -c /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdReceived.cpp
+
+CMakeFiles/messenger.dir/src/CmdReceived.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/messenger.dir/src/CmdReceived.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdReceived.cpp > CMakeFiles/messenger.dir/src/CmdReceived.cpp.i
+
+CMakeFiles/messenger.dir/src/CmdReceived.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/messenger.dir/src/CmdReceived.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdReceived.cpp -o CMakeFiles/messenger.dir/src/CmdReceived.cpp.s
+
+CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.requires:
+.PHONY : CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.requires
+
+CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.provides: CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.requires
+	$(MAKE) -f CMakeFiles/messenger.dir/build.make CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.provides.build
+.PHONY : CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.provides
+
+CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.provides.build: CMakeFiles/messenger.dir/src/CmdReceived.cpp.o
+
 # Object files for target messenger
 messenger_OBJECTS = \
-"CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o"
+"CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o" \
+"CMakeFiles/messenger.dir/src/CmdBase.cpp.o" \
+"CMakeFiles/messenger.dir/src/CmdSend.cpp.o" \
+"CMakeFiles/messenger.dir/src/CmdReceived.cpp.o"
 
 # External object files for target messenger
 messenger_EXTERNAL_OBJECTS =
 
-libmessenger.a: CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o
-libmessenger.a: CMakeFiles/messenger.dir/build.make
-libmessenger.a: CMakeFiles/messenger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX static library libmessenger.a"
-	$(CMAKE_COMMAND) -P CMakeFiles/messenger.dir/cmake_clean_target.cmake
+libmessenger.so: CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o
+libmessenger.so: CMakeFiles/messenger.dir/src/CmdBase.cpp.o
+libmessenger.so: CMakeFiles/messenger.dir/src/CmdSend.cpp.o
+libmessenger.so: CMakeFiles/messenger.dir/src/CmdReceived.cpp.o
+libmessenger.so: CMakeFiles/messenger.dir/build.make
+libmessenger.so: CMakeFiles/messenger.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX shared library libmessenger.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/messenger.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/messenger.dir/build: libmessenger.a
+CMakeFiles/messenger.dir/build: libmessenger.so
 .PHONY : CMakeFiles/messenger.dir/build
 
 CMakeFiles/messenger.dir/requires: CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o.requires
+CMakeFiles/messenger.dir/requires: CMakeFiles/messenger.dir/src/CmdBase.cpp.o.requires
+CMakeFiles/messenger.dir/requires: CMakeFiles/messenger.dir/src/CmdSend.cpp.o.requires
+CMakeFiles/messenger.dir/requires: CMakeFiles/messenger.dir/src/CmdReceived.cpp.o.requires
 .PHONY : CMakeFiles/messenger.dir/requires
 
 CMakeFiles/messenger.dir/clean:

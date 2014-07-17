@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/sensor.dir/src/examples/sensor.cpp.o  -o sensor -rdynamic libmessenger.so -lserial -Wl,-rpath,/home/edno/projetos/robot/cmdMessenger-cpp/build 

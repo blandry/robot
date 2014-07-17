@@ -30,7 +30,7 @@
  *  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  *
  * \section DESCRIPTION
- * This is the class responsible to hold the incoming command and for parsing the arguments.  
+ * This provides the interface of the class responsible to hold the incoming command and for parsing the arguments.  
  */
 
 #ifndef CMD_RECEIVED_H
@@ -49,32 +49,114 @@ namespace cmd{
 
       /*----------CTOR | DTOR----------*/
 
-      CmdReceived(std::string command = "", const char field_separator = ',', const char cmd_separator = ';', const char esc_character = '/');
+      CmdReceived(std::string command = "", 
+          const char field_separator = ',', 
+          const char cmd_separator = ';', 
+          const char esc_character = '/'
+          );
+
       virtual ~CmdReceived();
 
       /*----------PARSERS----------*/
 
+      /*
+       * Parses the next argument as a boolean.
+       *
+       * \return A bool representing the parsed argument.
+       */
       bool parseBool();
+
+      /*!
+       * Parses the next argument as a bool.
+       *
+       * \param arg Reference of a bool to receive the parsed argument.
+       */
       void parseBool(bool& arg);
 
+      /*!
+       * Parses the next argument as an integer.
+       *
+       * \return An integer representing the parsed argument.
+       */
       int parseInt();
+
+      /*!
+       * Parses the next argument as an integer.
+       *
+       * \param arg Reference of an integer to receive the parsed argument.
+       */
       void parseInt(int& arg);
 
+      /*!
+       * Parses the next argument as a character.
+       *
+       * \return A character representing the parsed argument.
+       */
       char parseChar();
+
+      /*!
+       * Parses the next argument as a character.
+       *
+       * \param arg Reference of a character to receive the parsed argument.
+       */
       void parseChar(char& arg);
 
+      /*!
+       * Parses the next argument as a float.
+       *
+       * \return A float representing the parsed argument.
+       */
       float parseFloat();
+
+      /*!
+       * Parses the next argument as a float.
+       *
+       * \para arg Reference of a float to receive the parsed argument.
+       */
       void parseFloat(float& arg);
 
+      /*!
+       * Parses the next argument as a double.
+       *
+       * \return A double representing the parsed argument.
+       */
       double parseDouble();
+
+      /*!
+       * Parses the next argument as a double.
+       *
+       * \param arg Reference of a double to receive the parsed argument.
+       */
       void parseDouble(double& arg);
       
+      /*!
+       * Parses the next argument as a String.
+       *
+       * \return A std::string representing the parsed argument.
+       */
       std::string parseString();
+
+      /*!
+       * Parses the next argument as a String.
+       *
+       * \param arg Reference of a std::string to receive the parsed argument.
+       */
       void parseString(std::string& arg);
 
       /*----------UTILITY----------*/
 
+      /*!
+       * Verifies the validity of the received command.
+       *
+       * \return A boolean. True if the command is valid and false otherwise.
+       */
       bool isValid();
+
+      /*!
+       * Get the number of arguments left in the queue.
+       *
+       * \return An int representing the number of arguments left.
+       */
       int getNumArgs();
 
     private:

@@ -126,6 +126,9 @@ namespace cmd{
           flowcontrol_t flowcontrol = flowcontrol_none 
           );
 
+      /*!
+       * Destructor
+       */
       virtual ~CmdMessenger();
 
       /*----------SERIAL SPECIFIC----------*/
@@ -173,7 +176,7 @@ namespace cmd{
        * \param command The command to be sent.
        * \param ack A boolean that defines if an ack will be required or not. If true, the function will wait for the ack.
        * \param ack_id The id of the ack command.
-       * \param timeout Simple timeout for the ack. If not specified, the timeout already set will be used. Note that this does not change the timeout already set.
+       * \param simple_timeout Simple timeout for the ack. If not specified, the timeout already set will be used. Note that this does not change the timeout already set.
        */
       bool send(const Cmd& command, bool ack=false, int ack_id = 0, int simple_timeout = -1); 
 
@@ -184,13 +187,14 @@ namespace cmd{
        * callbacks will be called.
        *
        * \param cmd_id The id of the command to be waited for.
+       * \param simple_timeout Simple timeout to wait for the command. If not specified, the timeout already set will be used. Note that this does not change the timeout already set.
        */
       bool waitCmd(int cmd_id, int simple_timeout = -1);
 
       /*!
        * Feeds in the serial data. That means, the commands in the buffer will be read and callbacks are gonna be called.
        */
-      void feedInSerialData(int num_commands);
+      void feedInSerialData();
 
       /*----------SETTERS AND GETTERS-------------*/
 
@@ -269,7 +273,7 @@ namespace cmd{
        *
        * Possible baudrates depends on the system, but some safe baudrates (for arduino as an example) include: 300, 1200, 2400, 4800, 9600, 19200, 57600, 115200.
        *
-       * \param An integer that sets the baudrate.
+       * \param baudrate An integer that sets the baudrate.
        */
       void setBaudRate(uint32_t baudrate);
       uint32_t getBaudrate() const;
@@ -290,6 +294,10 @@ namespace cmd{
       /*SERIAL PORT VARIABLES*/
 
       serial::Serial serial_port_;
+      void flush();
+
+      std::ostringstream buf_;
+      std::vector<uint8_t> raw_data_buf_;
 
       /*Cmd Messenger*/
       //protocol configurations

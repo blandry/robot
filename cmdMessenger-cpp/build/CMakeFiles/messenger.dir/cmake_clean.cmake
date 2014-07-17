@@ -1,7 +1,10 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/messenger.dir/src/CmdMessenger.cpp.o"
+  "CMakeFiles/messenger.dir/src/CmdBase.cpp.o"
+  "CMakeFiles/messenger.dir/src/CmdSend.cpp.o"
+  "CMakeFiles/messenger.dir/src/CmdReceived.cpp.o"
   "libmessenger.pdb"
-  "libmessenger.a"
+  "libmessenger.so"
 )
 
 # Per-language clean rules from dependency scanning.

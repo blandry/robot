@@ -39,13 +39,7 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 SET(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/cmd_base.dir/DependInfo.cmake"
-  "CMakeFiles/cmd_received.dir/DependInfo.cmake"
-  "CMakeFiles/cmd_send.dir/DependInfo.cmake"
   "CMakeFiles/led.dir/DependInfo.cmake"
   "CMakeFiles/messenger.dir/DependInfo.cmake"
-  "CMakeFiles/messenger2.dir/DependInfo.cmake"
-  "CMakeFiles/parse.dir/DependInfo.cmake"
-  "CMakeFiles/teste.dir/DependInfo.cmake"
-  "CMakeFiles/token.dir/DependInfo.cmake"
+  "CMakeFiles/sensor.dir/DependInfo.cmake"
   )

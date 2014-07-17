@@ -38,6 +38,8 @@ CmdMessenger::CmdMessenger(const std::string &port,
   esc_character_(esc_character)
 {
   default_callback_ = 0;
+
+  if(serial_port_.isOpen()) CmdMessenger::flush();
 }
 
 CmdMessenger::~CmdMessenger()
@@ -88,26 +90,96 @@ void CmdMessenger::attach(int cmd_id, CallBack callback)
   callbacks_[cmd_id] = callback;
 }
 
-void CmdMessenger::feedInSerialData(int num_commands)
+void CmdMessenger::feedInSerialData()
 {
-  std::vector<std::string> raw_commands = serial_port_.readlines(num_commands, ";"); //Gets the 'raw commands' in the buffer.
+    size_t num_bytes = serial_port_.available(); //get the number of bytes available in the port.
+    std::string buf_str = buf_.str(); 
+    uint8_t *raw_data = 0;
+    size_t bytes_read = 0;
 
-  for(unsigned long i = 0; i<raw_commands.size(); i++){ //fills in the commands vector
-    CmdReceived command(raw_commands[i], field_separator_, cmd_separator_, esc_character_);
+    raw_data = new uint8_t[num_bytes]; //allocate memory to hold the command
+    bytes_read = serial_port_.read(raw_data, num_bytes); //read the serial port and get the number of bytes actually read.
 
-    std::cout << raw_commands[i] << std::endl;
+    //convert the special character, so that it can be directly compared with the raw_data
+    uint8_t cmd_separator = static_cast<uint8_t>(cmd_separator_);
+    uint8_t esc_character = static_cast<uint8_t>(esc_character_);
 
-    if(callbacks_.count(command.getId())){
+    char last_buf_char = *buf_str.rbegin(); //last char of the old buffer. This is done so that we can check escaping.
 
-    if(command.isValid())
-      callbacks_[command.getId()](command);
+    uint8_t byte_read;
+    for(size_t i=0; i<bytes_read; i++){ //go over the pointer 
+
+        byte_read = raw_data[i]; 
+        
+        if(i > 0){ // if this is not the first time in the loop
+            if( byte_read == cmd_separator ){ //check if this is the cmd_separator
+                if(raw_data[i-1] == esc_character){ //if the last byte is the escaping character, put it in the buffer
+                    buf_ << (char) byte_read;
+                }
+                else
+                {//if the last was not the escaping character...
+                    //we faced the end of a command
+                    buf_ << (char) byte_read;
+
+                    //Once the command is completed, create the object to handle it!
+                    CmdReceived command = CmdReceived(buf_.str(), field_separator_, cmd_separator_, esc_character_);
+
+                    //Now, check if there is a callback attached to it.
+                    if( callbacks_.count(command.getId()) ){
+                        callbacks_[command.getId()](command); //If there's, call the callback.
+                    }
+                    else
+                    {// If there's no callback, check if theres a default callback attached.
+                        if(default_callback_) default_callback_(command);
+                    } 
+
+                    //std::cout << "command found: " << buf_.str();
+
+                    buf_.str("");
+                }
+            }
+            else
+            {//if it is not the cmd_separator, it is a simple character. So put it on the buffer
+                buf_ << (char) byte_read;
+            }
+        }
+        else
+        { // if this is the first time in the loop, we threat things a bit different, to check the old buffer.
+                 if( byte_read == cmd_separator ){//check if this is the cmd_separator.
+                     //check if the old buffer is empty. If it's, somethings wrong, so just ignore it.
+                    if(!buf_str.empty()){ 
+                        if(last_buf_char == esc_character) buf_ << (char) byte_read; //if the last buf char is a escaping character, escape it.
+                        else
+                        { //if the last char in the old buffer is not a escaping character, we faced the end of a command.
+                            buf_ << (char) byte_read; 
+
+                            //Create the CmdReceived object to handle the command.
+                            CmdReceived command = CmdReceived(buf_.str(), field_separator_, cmd_separator_, esc_character_);
+
+                            if( callbacks_.count(command.getId()) ){ //check if there is a callback.
+                                callbacks_[command.getId()](command);
+                            }
+                            else
+                            {//if there's no callback attached, call the default (if defined)
+                                if(default_callback_) default_callback_(command);
+                            }
+
+                            //std::cout << "command found: " << buf_.str();
+
+                            buf_.str("");
+                        }
+                    }
+                }
+                else
+                {
+                    buf_ << (char) byte_read;
+                }        
+        }
 
     }
-    else
-    {
-      if(default_callback_) default_callback_(command);
-    }
-  } 
+
+    delete[] raw_data; //free the alocated memory
+
 }
 /*----------SERIAL SPECIFIC----------*/
 
@@ -117,6 +189,7 @@ void CmdMessenger::feedInSerialData(int num_commands)
 void CmdMessenger::open()
 {
   serial_port_.open();
+  CmdMessenger::flush();
 }
 
 bool CmdMessenger::isOpen() const
@@ -127,6 +200,13 @@ bool CmdMessenger::isOpen() const
 void CmdMessenger::close()
 {
   serial_port_.close();
+}
+
+void CmdMessenger::flush()
+{
+    serial_port_.flushInput();
+    serial_port_.flushOutput();
+    serial_port_.flush();
 }
 
 /*----------SETTERS AND GETTERS----------*/

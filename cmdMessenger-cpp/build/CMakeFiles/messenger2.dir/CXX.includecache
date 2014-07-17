@@ -8,6 +8,18 @@
 
 .././include/CmdBase.h
 
+.././include/CmdMessenger.h
+iostream
+-
+map
+-
+serial/serial.h
+.././include/serial/serial.h
+CmdSend.h
+.././include/CmdSend.h
+CmdReceived.h
+.././include/CmdReceived.h
+
 .././include/CmdReceived.h
 iostream
 -
@@ -29,6 +41,20 @@ CmdBase.h
 /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdBase.cpp
 CmdBase.h
 /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdBase.h
+
+/home/edno/projetos/robot/cmdMessenger-cpp/src/CmdMessenger.cpp
+iostream
+-
+vector
+-
+algorithm
+-
+sstream
+-
+CmdSend.h
+/home/edno/projetos/robot/cmdMessenger-cpp/src/CmdSend.h
+CmdMessenger.h
+/home/edno/projetos/robot/cmdMessenger-cpp/src/CmdMessenger.h
 
 /home/edno/projetos/robot/cmdMessenger-cpp/src/CmdReceived.cpp
 iostream

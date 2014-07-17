@@ -14,7 +14,9 @@ This is simply an implementation of such messaging protocol for the pc side, bui
 
 \section getting_started Getting Started
 
-Take a look at the main class documentation \ref cmd::CmdMessenger
+Take a look at the main class documentation \ref cmd::CmdMessenger and the command classes \ref cmd::CmdReceived \ref cmd::CmdSend
+
+Take a look at this simple example \ref led.cpp
 
 \todo write the getting started section
 
@@ -34,5 +36,6 @@ Take a look at the main class documentation \ref cmd::CmdMessenger
 
 \todo Write the install section
 \todo Remember to find a way to ship all dependecies in one package 
+\todo Throw exceptions
 
 */

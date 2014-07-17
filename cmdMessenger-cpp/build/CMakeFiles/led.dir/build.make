@@ -52,39 +52,39 @@ include CMakeFiles/led.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/led.dir/flags.make
 
-CMakeFiles/led.dir/src/led.cpp.o: CMakeFiles/led.dir/flags.make
-CMakeFiles/led.dir/src/led.cpp.o: ../src/led.cpp
+CMakeFiles/led.dir/src/examples/led.cpp.o: CMakeFiles/led.dir/flags.make
+CMakeFiles/led.dir/src/examples/led.cpp.o: ../src/examples/led.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/edno/projetos/robot/cmdMessenger-cpp/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/led.dir/src/led.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/led.dir/src/led.cpp.o -c /home/edno/projetos/robot/cmdMessenger-cpp/src/led.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/led.dir/src/examples/led.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/led.dir/src/examples/led.cpp.o -c /home/edno/projetos/robot/cmdMessenger-cpp/src/examples/led.cpp
 
-CMakeFiles/led.dir/src/led.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/led.dir/src/led.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/edno/projetos/robot/cmdMessenger-cpp/src/led.cpp > CMakeFiles/led.dir/src/led.cpp.i
+CMakeFiles/led.dir/src/examples/led.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/led.dir/src/examples/led.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/edno/projetos/robot/cmdMessenger-cpp/src/examples/led.cpp > CMakeFiles/led.dir/src/examples/led.cpp.i
 
-CMakeFiles/led.dir/src/led.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/led.dir/src/led.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/edno/projetos/robot/cmdMessenger-cpp/src/led.cpp -o CMakeFiles/led.dir/src/led.cpp.s
+CMakeFiles/led.dir/src/examples/led.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/led.dir/src/examples/led.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/edno/projetos/robot/cmdMessenger-cpp/src/examples/led.cpp -o CMakeFiles/led.dir/src/examples/led.cpp.s
 
-CMakeFiles/led.dir/src/led.cpp.o.requires:
-.PHONY : CMakeFiles/led.dir/src/led.cpp.o.requires
+CMakeFiles/led.dir/src/examples/led.cpp.o.requires:
+.PHONY : CMakeFiles/led.dir/src/examples/led.cpp.o.requires
 
-CMakeFiles/led.dir/src/led.cpp.o.provides: CMakeFiles/led.dir/src/led.cpp.o.requires
-	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/led.cpp.o.provides.build
-.PHONY : CMakeFiles/led.dir/src/led.cpp.o.provides
+CMakeFiles/led.dir/src/examples/led.cpp.o.provides: CMakeFiles/led.dir/src/examples/led.cpp.o.requires
+	$(MAKE) -f CMakeFiles/led.dir/build.make CMakeFiles/led.dir/src/examples/led.cpp.o.provides.build
+.PHONY : CMakeFiles/led.dir/src/examples/led.cpp.o.provides
 
-CMakeFiles/led.dir/src/led.cpp.o.provides.build: CMakeFiles/led.dir/src/led.cpp.o
+CMakeFiles/led.dir/src/examples/led.cpp.o.provides.build: CMakeFiles/led.dir/src/examples/led.cpp.o
 
 # Object files for target led
 led_OBJECTS = \
-"CMakeFiles/led.dir/src/led.cpp.o"
+"CMakeFiles/led.dir/src/examples/led.cpp.o"
 
 # External object files for target led
 led_EXTERNAL_OBJECTS =
 
-led: CMakeFiles/led.dir/src/led.cpp.o
+led: CMakeFiles/led.dir/src/examples/led.cpp.o
 led: CMakeFiles/led.dir/build.make
-led: libmessenger2.so
+led: libmessenger.so
 led: CMakeFiles/led.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable led"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/led.dir/link.txt --verbose=$(VERBOSE)
@@ -93,7 +93,7 @@ led: CMakeFiles/led.dir/link.txt
 CMakeFiles/led.dir/build: led
 .PHONY : CMakeFiles/led.dir/build
 
-CMakeFiles/led.dir/requires: CMakeFiles/led.dir/src/led.cpp.o.requires
+CMakeFiles/led.dir/requires: CMakeFiles/led.dir/src/examples/led.cpp.o.requires
 .PHONY : CMakeFiles/led.dir/requires
 
 CMakeFiles/led.dir/clean:
