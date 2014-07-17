@@ -1,8 +1,0 @@
-prefix=/home/edno/projetos/robot/ros_ws/devel
-
-Name: arduino2_driver
-Description: Description of arduino2_driver
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/edno/projetos/robot/ros_ws/devel/lib 
-Requires: 

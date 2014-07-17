@@ -1,8 +1,0 @@
-prefix=/home/edno/projetos/robot/ros_ws/install
-
-Name: kinect_driver
-Description: Description of kinect_driver
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/edno/projetos/robot/ros_ws/install/lib 
-Requires: 

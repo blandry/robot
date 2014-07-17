@@ -1,2 +1,0 @@
-arduino1_driver:arduino2_driver:base:kinect_driver
--DPYTHON_EXECUTABLE=/usr/bin/python2
