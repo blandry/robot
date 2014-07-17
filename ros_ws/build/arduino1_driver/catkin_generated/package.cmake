@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "arduino1_driver")
+set(arduino1_driver_MAINTAINER "fco-edno <edno-moura@mail.com>")
+set(arduino1_driver_DEPRECATED "")
+set(arduino1_driver_VERSION "0.0.1")
+set(arduino1_driver_BUILD_DEPENDS "geometry_msgs" "roscpp" "std_msgs" "sensor_msgs")
+set(arduino1_driver_RUN_DEPENDS "geometry_msgs" "roscpp" "std_msgs" "sensor_msgs")
+set(arduino1_driver_BUILDTOOL_DEPENDS "catkin")

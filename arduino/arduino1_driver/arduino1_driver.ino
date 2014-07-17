@@ -30,6 +30,13 @@
  #include <MotoShield.h> 
  #include <CmdMessenger.h>
  
+ //=====================MOTOR CONTROLLER DEFINITION======================/
+ 
+ MotoShield left_motor, right_motor;
+ 
+ void right_motor_cb();
+ void left_motor_cb();
+ 
  //===========================CMD MESSENGER DEFINITIONS==================================//
  
  enum
@@ -37,7 +44,9 @@
    kultra_nt,
    kultra_st,
    kultra_et,
-   kultra_wt
+   kultra_wt,
+   kright_motor,
+   kleft_motor
  };
  
  CmdMessenger ros_driver(Serial);
@@ -72,7 +81,7 @@
   */
  unsigned long distance(int trig_pin, int echo_pin);
  
- //=====================MOTOR CONTROLLER DEFINITION======================/
+
  
 
 /**********************************************
@@ -80,12 +89,21 @@
  **********************************************/
  
 void setup() {
+  //Setting pins as input to save energy
   for(int i=2; i<=53; i++){
     pinMode(i, INPUT);
   }  
   
+  //motor initialization
+  //Put something like: right_motor.begin(x), whrere x is t
+ 
+  //Setting the ultrassonic trig pins as output 
   pinMode(trig_nt, OUTPUT);
+  pinMode(trig_st, OUTPUT);
+  pinMode(trig_et, OUTPUT);
+  pinMode(trig_wt, OUTPUT);
   
+  //Serial baudrate defitinition
   Serial.begin(9600);
   
   ros_driver.printLfCr(false);
@@ -98,6 +116,9 @@ void setup() {
  
 void loop() {
   ros_driver.sendCmd<int>( kultra_nt, distance(trig_nt, echo_nt) );
+  ros_driver.sendCmd<int>( kultra_st, distance(trig_st, echo_st) );
+  ros_driver.sendCmd<int>( kultra_et, distance(trig_et, echo_et) );
+  ros_driver.sendCmd<int>( kultra_wt, distance(trig_wt, echo_wt) );
   delay(50);
 }
 

@@ -25,6 +25,17 @@
     </group>
 
     <!--arduino 1 driver group-->
+    <group>
+        <remap from="ultrassonic/north" to="sensor/ultrassonic/north" />
+        <remap from="ultrassonic/south" to="sensor/ultrassonic/south" />
+        <remap from="ultrassonic/east" to="sensor/ultrassonic/east" />
+        <remap from="ultrassonic/west" to="sensor/ultrassonic/west" />
+
+        <node name="arduino1_driver" pkg="arduino1_driver" type="arduino1_driver_node">
+            <param name="serial_port" value="/dev/ttyACM0" type="str" />
+            <param name="baudrate" value="9600" type="int" />
+        </node>
+    </group>
     <!--arduino 2 driver group-->
 
 </launch>

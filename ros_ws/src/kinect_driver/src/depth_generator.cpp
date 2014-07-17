@@ -17,10 +17,10 @@ int main(int argc, char *argv[])
     image_transport::ImageTransport it(nh);
 
     image_transport::Publisher depth_map_pub         = it.advertise("depth_map", 1); //advertise in the depth_map topic.
-    image_transport::Publisher point_cloud_pub       = it.advertise("point_cloud_map", 1); //advertise in the point_cloud_map topic.
-    image_transport::Publisher disparity_map_pub     = it.advertise("disparity_map", 1); //advertise in the disparity_map topic.
-    image_transport::Publisher disparity_map_32f_pub = it.advertise("disparity_map_32f", 1); //advertise in the disparity_map_32f topic.
-    image_transport::Publisher valid_mask_pub        = it.advertise("valid_depth_mask", 1); //advertise in the valid_depth_mask topic.
+//    image_transport::Publisher point_cloud_pub       = it.advertise("point_cloud_map", 1); //advertise in the point_cloud_map topic.
+//    image_transport::Publisher disparity_map_pub     = it.advertise("disparity_map", 1); //advertise in the disparity_map topic.
+//    image_transport::Publisher disparity_map_32f_pub = it.advertise("disparity_map_32f", 1); //advertise in the disparity_map_32f topic.
+//    image_transport::Publisher valid_mask_pub        = it.advertise("valid_depth_mask", 1); //advertise in the valid_depth_mask topic.
 
     cv::VideoCapture kinect; //Creates a VideoCapture object to manage the kinect device, that is, grab the images and set configurations.
     kinect.open(CV_CAP_OPENNI); //opens the device.  
@@ -47,16 +47,16 @@ int main(int argc, char *argv[])
     //CvImage objects are resposible for converting a cv::Mat object into a ros sensor_msgs::Image
 
     cv_bridge::CvImage depth_map;
-    cv_bridge::CvImage point_cloud;
-    cv_bridge::CvImage disparity_map;
-    cv_bridge::CvImage disparity_map_32f;
-    cv_bridge::CvImage valid_mask; 
+ //   cv_bridge::CvImage point_cloud;
+ //   cv_bridge::CvImage disparity_map;
+ //   cv_bridge::CvImage disparity_map_32f;
+ //   cv_bridge::CvImage valid_mask; 
 
     depth_map.encoding         = sensor_msgs::image_encodings::TYPE_16UC1;
-    point_cloud.encoding       = sensor_msgs::image_encodings::TYPE_32FC3;
-    disparity_map.encoding     = sensor_msgs::image_encodings::MONO8;
-    disparity_map_32f.encoding = sensor_msgs::image_encodings::TYPE_32FC1;
-    valid_mask.encoding        = sensor_msgs::image_encodings::MONO8;
+ //   point_cloud.encoding       = sensor_msgs::image_encodings::TYPE_32FC3;
+ //   disparity_map.encoding     = sensor_msgs::image_encodings::MONO8;
+ //   disparity_map_32f.encoding = sensor_msgs::image_encodings::TYPE_32FC1;
+ //   valid_mask.encoding        = sensor_msgs::image_encodings::MONO8;
 
     ROS_DEBUG("Sleeping time (3 seconds)");
     ros::Duration(3).sleep(); //wait 5 seconds so that everything goes right
@@ -77,6 +77,8 @@ int main(int argc, char *argv[])
                 //if a depth_map could not be retrieved, show a warning
                 ROS_WARN("Not able to retrieve a DEPTH_MAP image");
             }
+
+            /*
             
             //retrieves a point_cloud
             if(kinect.retrieve(point_cloud.image, CV_CAP_OPENNI_POINT_CLOUD_MAP)){
@@ -120,6 +122,7 @@ int main(int argc, char *argv[])
                 //else show a warning
                 ROS_WARN("Not able to retrieve a VALID_DEPTH_MASK from DEPTH_GENERATOR"); 
             }
+            */
 
         } 
         else

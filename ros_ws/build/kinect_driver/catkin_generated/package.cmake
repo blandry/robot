@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "kinect_driver")
+set(kinect_driver_MAINTAINER "edno <edno@todo.todo>")
+set(kinect_driver_DEPRECATED "")
+set(kinect_driver_VERSION "0.0.1")
+set(kinect_driver_BUILD_DEPENDS "cv_bridge" "image_transport" "roscpp" "sensor_msgs" "std_msgs")
+set(kinect_driver_RUN_DEPENDS "cv_bridge" "image_transport" "roscpp" "sensor_msgs" "std_msgs")
+set(kinect_driver_BUILDTOOL_DEPENDS "catkin")

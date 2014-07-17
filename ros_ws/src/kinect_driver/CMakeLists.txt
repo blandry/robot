@@ -32,10 +32,10 @@ include_directories(
 
  # Image generator
 add_executable(image_generator_node ./src/image_generator.cpp)
-target_link_libraries(image_generator_node driver opencv_core opencv_highgui ${catkin_LIBRARIES})
+target_link_libraries(image_generator_node opencv_core opencv_highgui ${catkin_LIBRARIES})
 
 ########## Depth Generator ##########
 
 # Depth generator
 add_executable(depth_generator_node ./src/depth_generator.cpp)
-target_link_libraries(depth_generator_node driver opencv_core opencv_highgui ${catkin_LIBRARIES}) 
+target_link_libraries(depth_generator_node opencv_core opencv_highgui ${catkin_LIBRARIES}) 

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "arduino2_driver")
+set(arduino2_driver_MAINTAINER "edno <edno@todo.todo>")
+set(arduino2_driver_DEPRECATED "")
+set(arduino2_driver_VERSION "0.0.0")
+set(arduino2_driver_BUILD_DEPENDS "geometry_msgs" "roscpp" "sensor_msgs" "std_msgs")
+set(arduino2_driver_RUN_DEPENDS "geometry_msgs" "roscpp" "sensor_msgs" "std_msgs")
+set(arduino2_driver_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,8 @@
+prefix=/home/edno/projetos/robot/ros_ws/devel
+
+Name: base
+Description: Description of base
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/edno/projetos/robot/ros_ws/devel/lib 
+Requires: 

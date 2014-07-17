@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 
     hc_sr04.radiation_type = sensor_msgs::Range::ULTRASOUND;
     hc_sr04.field_of_view = M_PI/12;
-    hc_sr04.min_range = 0.02;
+    hc_sr04.min_range = 0.020;
     hc_sr04.max_range = 4.00;
 
     hc_sr04_nt = hc_sr04;
@@ -71,8 +71,8 @@ int main(int argc, char *argv[])
     hc_sr04_et = hc_sr04;
     hc_sr04_wt = hc_sr04;
 
-    std::string port;
-    int baudrate;
+    std::string port; //to hold the port name
+    int baudrate; //to hold the baudrate
 
 //    port = "/dev/ttyACM0";
 //    baudrate = 9600;
@@ -81,7 +81,22 @@ int main(int argc, char *argv[])
     nh_private.param<int>("baudrate", baudrate, 9600);
     cmd::CmdMessenger arduino(port, baudrate);
 
+    if(arduino.isOpen()){ //if the port is opened, print some information
+        ROS_INFO("Opened device in the port: %s", arduino.getPort().c_str());
+        ROS_INFO("Baudrate: %d", arduino.getBaudrate());
+    }
+    else
+    {//if the port is not opened, keep sending message and trying to open it
+        while(!arduino.isOpen())
+        {
+            ROS_ERROR("Port not opened");
+            arduino.open();
+            ros::Duration(0.5).sleep(); 
+        }
+    } 
+
     arduino.attach(kultra_nt, ultra_nt_cb);
+    arduino.attach(kultra_st, ultra_st_cb);
 
     while(ros::ok())
     {
@@ -94,23 +109,28 @@ int main(int argc, char *argv[])
 
 void ultra_nt_cb(cmd::CmdReceived& command)
 {
-    int dist = command.parseInt();
-    hc_sr04_nt.range = (float)dist/100;
+    float dist = (float) command.parseInt();
+    hc_sr04_nt.range = dist/100;
     pub_nt.publish(hc_sr04_nt);
+} 
+
+void ultra_st_cb(cmd::CmdReceived& command)
+{
+    float dist = (float) command.parseInt();
+    hc_sr04_st.range = dist/100;
+    pub_st.publish(hc_sr04_st);
 }
 
+void ultra_et_cb(cmd::CmdReceived& command)
+{
+    int dist = command.parseInt();
+    hc_sr04_et.range = (float)dist/100;
+    pub_et.publish(hc_sr04_et);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void ultra_wt_cb(cmd::CmdReceived& command)
+{
+    int dist = command.parseInt();
+    hc_sr04_wt.range = (float)dist/100;
+    pub_wt.publish(hc_sr04_wt);
+} 
