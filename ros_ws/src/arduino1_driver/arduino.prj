@@ -1,9 +1,0 @@
-arduino=/home/edno/projetos/robot/ros_ws/src/arduino1_driver CD=. in= out= filter="*.cpp *.c *.h *.hpp *.txt *.xml README"{
-src=/home/edno/projetos/robot/ros_ws/src/arduino1_driver/src{
-}
-include=/home/edno/projetos/robot/ros_ws/src/arduino1_driver/include{
-}
-README
-CMakeLists.txt
-} 
-

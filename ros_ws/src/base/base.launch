@@ -1,0 +1,30 @@
+<launch>
+
+    <!--kinect driver group-->
+    <group ns="sensor">
+
+           <group ns="kinect">
+
+               <!--IMAGE GENERATOR--> 
+               <remap from="bgr_image" to="image_generator/bgr_image" />
+               <remap from="gray_image" to="image_generator/gray_image" />
+
+               <node name="image_generator" pkg="kinect_driver" type="image_generator_node" />
+
+               <!--DEPTH GENERATOR-->
+               <remap from="depth_map" to="depth_generator/depth_map" />
+               <remap from="point_cloud_map" to="depth_generator/point_cloud_map" />
+               <remap from="disparity_map" to="depth_generator/disparity_map" />
+               <remap from="disparity_map_32f" to="depth_generator/disparity_map_32f" />
+               <remap from="valid_depth_mask" to="depth_generator/valid_depth_mask" />
+
+               <node name="depth_generator" pkg="kinect_driver" type="depth_generator_node" />
+
+           </group>
+
+    </group>
+
+    <!--arduino 1 driver group-->
+    <!--arduino 2 driver group-->
+
+</launch>

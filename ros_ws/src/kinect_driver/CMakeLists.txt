@@ -24,29 +24,18 @@ catkin_package()  #NUNCA ESQUEÇA ISSO POR FAVOR
 include_directories(
   ${catkin_INCLUDE_DIRS}
   ${OpenCV_INCLUDE_DIRS}
-  ./include/kinect_driver/
 )
 
-## Declare a cpp library
- add_library(kinect_driver src/${PROJECT_NAME}/kinect_driver.cpp)
-
- ##The main driver to ros
- add_library(driver src/${PROJECT_NAME}/driver.cpp)
- target_link_libraries(driver kinect_driver) 
-
 ## Declare a cpp executable
-## BGR driver
- add_executable(bgr_driver_node src/bgr_driver_node.cpp )
- target_link_libraries(bgr_driver_node  driver opencv_core opencv_highgui ${catkin_LIBRARIES}) 
 
-## Gray driver
- add_executable(gray_driver_node src/gray_driver_node.cpp )
- target_link_libraries(gray_driver_node driver opencv_core opencv_highgui ${catkin_LIBRARIES}) 
+########## Image Generator ##########
 
-## Depth map driver
-add_executable(depth_map_driver_node ./src/depth_map_driver_node.cpp)
-target_link_libraries(depth_map_driver_node driver opencv_core opencv_highgui ${catkin_LIBRARIES})
+ # Image generator
+add_executable(image_generator_node ./src/image_generator.cpp)
+target_link_libraries(image_generator_node driver opencv_core opencv_highgui ${catkin_LIBRARIES})
 
-## Detph mask driver
-add_executable(valid_mask_driver_node ./src/valid_mask_driver_node.cpp)
-target_link_libraries(valid_mask_driver_node driver opencv_core opencv_highgui ${catkin_LIBRARIES})
+########## Depth Generator ##########
+
+# Depth generator
+add_executable(depth_generator_node ./src/depth_generator.cpp)
+target_link_libraries(depth_generator_node driver opencv_core opencv_highgui ${catkin_LIBRARIES}) 

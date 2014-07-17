@@ -1,1 +1,0 @@
-obs: Sera preciso fazer no nó do ros o method getXchangedState, e implementar também wasChangedX|wasChangedY. para que a comunicação serial funcione corretamente

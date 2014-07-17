@@ -1,0 +1,15 @@
+<launch>
+
+    <!--kinect driver group-->
+
+        <!--image generator-->
+        <remap from="kinect/bgr_image" to="oi" />
+
+        <node name="bgr_driver" pkg="kinect_driver" type="bgr_driver_node"/>
+
+
+
+    <!--arduino 1 driver group-->
+    <!--arduino 2 driver group-->
+
+</launch>
