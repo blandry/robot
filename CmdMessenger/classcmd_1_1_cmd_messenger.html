@@ -72,7 +72,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,14 +110,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3a08819cae57dd6c9f7515ebae923696"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92df6db7de8ce3d685d4da21b7c76d77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a92df6db7de8ce3d685d4da21b7c76d77">attach</a> (<a class="el" href="namespacecmd.html#a20b40ecd3ba46130eef6c125f70c4121">CallBack</a> <a class="el" href="classcallback.html">callback</a>)</td></tr>
 <tr class="separator:a92df6db7de8ce3d685d4da21b7c76d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5af33d07f7074623701f822a6cb7ee81"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5af33d07f7074623701f822a6cb7ee81"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a5af33d07f7074623701f822a6cb7ee81">attach</a> (void(T::*callback_method)(<a class="el" href="classcmd_1_1_cmd_received.html">CmdReceived</a> &amp;), T &amp;object_ref)</td></tr>
+<tr class="separator:a5af33d07f7074623701f822a6cb7ee81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbc2aa2a6bc95960215eeaa88c4533a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#abbc2aa2a6bc95960215eeaa88c4533a4">attach</a> (int cmd_id, <a class="el" href="namespacecmd.html#a20b40ecd3ba46130eef6c125f70c4121">CallBack</a> <a class="el" href="classcallback.html">callback</a>)</td></tr>
 <tr class="separator:abbc2aa2a6bc95960215eeaa88c4533a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f50f00a66e6d40ed5ee2234b424e9a9"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8f50f00a66e6d40ed5ee2234b424e9a9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a8f50f00a66e6d40ed5ee2234b424e9a9">attach</a> (int cmd_id, void(T::*callback_method)(<a class="el" href="classcmd_1_1_cmd_received.html">CmdReceived</a> &amp;), T &amp;object_ref)</td></tr>
+<tr class="separator:a8f50f00a66e6d40ed5ee2234b424e9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ea6815a9c6dad49350396839527e25d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a5ea6815a9c6dad49350396839527e25d">send</a> (const <a class="el" href="namespacecmd.html#af9b58ca395c80edd1335e21d1b9f4c99">Cmd</a> &amp;command, bool ack=false, int ack_id=0, int simple_timeout=-1)</td></tr>
 <tr class="separator:a5ea6815a9c6dad49350396839527e25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40c20df2763d3af8e59a7c135a82e121"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a40c20df2763d3af8e59a7c135a82e121">waitCmd</a> (int cmd_id, int simple_timeout=-1)</td></tr>
 <tr class="separator:a40c20df2763d3af8e59a7c135a82e121"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77bde87787bd2da58e1ecc523d4c1a90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a77bde87787bd2da58e1ecc523d4c1a90">feedInSerialData</a> (int num_commands)</td></tr>
-<tr class="separator:a77bde87787bd2da58e1ecc523d4c1a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3257cf2b159a2b3d8754b701865c743d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a3257cf2b159a2b3d8754b701865c743d">feedInSerialData</a> ()</td></tr>
+<tr class="separator:a3257cf2b159a2b3d8754b701865c743d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af83fbed5873f5e517a0432438dd7c873"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#af83fbed5873f5e517a0432438dd7c873">setFieldSep</a> (const char field_separator)</td></tr>
 <tr class="separator:af83fbed5873f5e517a0432438dd7c873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84895ecc82e2302891b119887944a308"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcmd_1_1_cmd_messenger.html#a84895ecc82e2302891b119887944a308">getFieldSep</a> () const </td></tr>
@@ -163,7 +169,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="cmd_messenger_8h_source.html#l00092">92</a> of file <a class="el" href="cmd_messenger_8h_source.html">CmdMessenger.h</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8h_source.html#l00095">95</a> of file <a class="el" href="cmd_messenger_8h_source.html">CmdMessenger.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aba80ae7cc283a24b7afa08c18f89af0f"></a>
 <div class="memitem">
@@ -293,7 +299,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Destructor </p>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00043">43</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00045">45</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -319,7 +325,53 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00081">81</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00083">83</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5af33d07f7074623701f822a6cb7ee81"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd::CmdMessenger::attach </td>
+          <td>(</td>
+          <td class="paramtype">void(T::*)(<a class="el" href="classcmd_1_1_cmd_received.html">CmdReceived</a> &amp;)&#160;</td>
+          <td class="paramname"><em>callback_method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>object_ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attaches a class method as the default callback for commands without a specific callback.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback_method</td><td>A method of type 'void func(CmdReceived&amp;)'. </td></tr>
+    <tr><td class="paramname">object_ref</td><td>The object instance of the class. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="cmd_messenger_8h_source.html#l00176">176</a> of file <a class="el" href="cmd_messenger_8h_source.html">CmdMessenger.h</a>.</p>
 
 </div>
 </div>
@@ -346,15 +398,69 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Attaches a callback to a command. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Attaches a callback to a command.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cmd_id</td><td>Id of the command to attach a callback. </td></tr>
+    <tr><td class="paramname">cmd_id</td><td>Id of the command to attach a callback to. </td></tr>
     <tr><td class="paramname">callback</td><td>Callback to attach. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00086">86</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00088">88</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f50f00a66e6d40ed5ee2234b424e9a9"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd::CmdMessenger::attach </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmd_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(T::*)(<a class="el" href="classcmd_1_1_cmd_received.html">CmdReceived</a> &amp;)&#160;</td>
+          <td class="paramname"><em>callback_method</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T &amp;&#160;</td>
+          <td class="paramname"><em>object_ref</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attaches a class method as a callback to a command.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd_id</td><td>Id of the command to attach a callback to. </td></tr>
+    <tr><td class="paramname">callback_method</td><td>A method to attach as a callback. </td></tr>
+    <tr><td class="paramname">object_ref</td><td>An instance of a object of the class. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="cmd_messenger_8h_source.html#l00197">197</a> of file <a class="el" href="cmd_messenger_8h_source.html">CmdMessenger.h</a>.</p>
 
 </div>
 </div>
@@ -372,26 +478,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Closes the serial port </p>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00127">127</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00200">200</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a77bde87787bd2da58e1ecc523d4c1a90"></a>
+<a class="anchor" id="a3257cf2b159a2b3d8754b701865c743d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void CmdMessenger::feedInSerialData </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>num_commands</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Feeds in the serial data. That means, the commands in the buffer will be read and callbacks are gonna be called. </p>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00091">91</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00093">93</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -408,7 +513,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00189">189</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00269">269</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -425,7 +530,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00199">199</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00279">279</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -445,7 +550,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A character that sets the command separator.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classcmd_1_1_cmd_messenger.html#afebb6b63ae64c661b680597ef29bc879">CmdMessenger::setCmdSep</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00149">149</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00229">229</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -465,7 +570,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A character that sets the escape character.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classcmd_1_1_cmd_messenger.html#ada69819065773ffc3c4923517321d6e5">CmdMessenger::setEscChar</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00159">159</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00239">239</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -485,7 +590,7 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>A character that sets the field separator.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classcmd_1_1_cmd_messenger.html#af83fbed5873f5e517a0432438dd7c873">CmdMessenger::setFieldSep</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00139">139</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00219">219</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -502,7 +607,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00229">229</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00309">309</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -519,7 +624,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00209">209</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00289">289</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +649,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00179">179</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00259">259</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -561,7 +666,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00219">219</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00299">299</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -593,7 +698,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00122">122</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00195">195</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -619,7 +724,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00117">117</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00189">189</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -669,7 +774,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00049">49</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00051">51</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -695,7 +800,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00184">184</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00264">264</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -713,7 +818,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00194">194</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00274">274</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -738,7 +843,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00144">144</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00224">224</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -763,7 +868,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00154">154</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00234">234</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -788,7 +893,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00134">134</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00214">214</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -806,7 +911,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00224">224</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00304">304</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -824,7 +929,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00204">204</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00284">284</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -853,7 +958,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00164">164</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00244">244</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -871,7 +976,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00214">214</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00294">294</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -889,7 +994,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00169">169</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00249">249</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -935,7 +1040,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00174">174</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00254">254</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -962,7 +1067,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Waits for an specific command. This is used mainly because some examples, in the official <a class="el" href="classcmd_1_1_cmd_messenger.html">CmdMessenger</a> for arduino, send a command in the setup() function when everything is ready. I noted that sometimes the serial port is opened before, or after, this message can be sent. Anyway, it used to bring some bugs into my test codes. This function will not drop the commands read before the specified command, it will put them in a container and then, when a call to <a class="el" href="classcmd_1_1_cmd_messenger.html#a77bde87787bd2da58e1ecc523d4c1a90">CmdMessenger::feedInSerialData</a> is made, the specified callbacks will be called.</p>
+<p>Waits for an specific command. This is used mainly because some examples, in the official <a class="el" href="classcmd_1_1_cmd_messenger.html">CmdMessenger</a> for arduino, send a command in the setup() function when everything is ready. I noted that sometimes the serial port is opened before, or after, this message can be sent. Anyway, it used to bring some bugs into my test codes. This function will not drop the commands read before the specified command, it will put them in a container and then, when a call to <a class="el" href="classcmd_1_1_cmd_messenger.html#a3257cf2b159a2b3d8754b701865c743d">CmdMessenger::feedInSerialData</a> is made, the specified callbacks will be called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cmd_id</td><td>The id of the command to be waited for. </td></tr>
@@ -971,7 +1076,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00077">77</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
+<p>Definition at line <a class="el" href="cmd_messenger_8cpp_source.html#l00079">79</a> of file <a class="el" href="cmd_messenger_8cpp_source.html">CmdMessenger.cpp</a>.</p>
 
 </div>
 </div>
@@ -982,7 +1087,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jul 12 2014 12:17:19 for CmdMessenger by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 21 2014 15:15:06 for CmdMessenger by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
