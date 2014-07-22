@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7ecallback',['~callback',['../classcallback.html#a630ccfaeea6fc3f676e38e8a75dc6155',1,'callback']]],
   ['_7ecmdbase',['~CmdBase',['../class_cmd_base.html#a79d89d75709596e426ef412883ba4c91',1,'CmdBase']]],
   ['_7ecmdmessenger',['~CmdMessenger',['../classcmd_1_1_cmd_messenger.html#aa92b483212121faffeb02b7a63450ad0',1,'cmd::CmdMessenger']]],
   ['_7ecmdreceived',['~CmdReceived',['../classcmd_1_1_cmd_received.html#aae3a60edebca81eccf26c132abd334bd',1,'cmd::CmdReceived']]],

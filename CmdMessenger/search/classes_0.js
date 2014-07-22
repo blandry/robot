@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['callback',['callback',['../classcallback.html',1,'']]],
   ['cbfunctiontranslator0',['CBFunctionTranslator0',['../class_c_b_function_translator0.html',1,'']]],
   ['cbfunctiontranslator0wret',['CBFunctionTranslator0wRet',['../class_c_b_function_translator0w_ret.html',1,'']]],
   ['cbfunctiontranslator1',['CBFunctionTranslator1',['../class_c_b_function_translator1.html',1,'']]],

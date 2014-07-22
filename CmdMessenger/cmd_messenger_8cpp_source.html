@@ -160,12 +160,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classcmd_1_1_cmd_messenger.html#a92df6db7de8ce3d685d4da21b7c76d77">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcmd_1_1_cmd_messenger.html#a92df6db7de8ce3d685d4da21b7c76d77">CmdMessenger::attach</a>(<a class="code" href="namespacecmd.html#a20b40ecd3ba46130eef6c125f70c4121">CallBack</a> <a class="code" href="classcallback.html">callback</a>)</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classcmd_1_1_cmd_messenger.html#a92df6db7de8ce3d685d4da21b7c76d77">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcmd_1_1_cmd_messenger.html#a92df6db7de8ce3d685d4da21b7c76d77">CmdMessenger::attach</a>(<a class="code" href="namespacecmd.html#a20b40ecd3ba46130eef6c125f70c4121">CallBack</a> callback)</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  default_callback_ = <a class="code" href="callback_8h.html#aeed79d4ab5ab2a84f409fecf4c27f70c">makeFunctor</a>((<a class="code" href="class_c_b_functor1w_ret.html">CallBackFunctor</a>*)0, callback);</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classcmd_1_1_cmd_messenger.html#abbc2aa2a6bc95960215eeaa88c4533a4">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcmd_1_1_cmd_messenger.html#a92df6db7de8ce3d685d4da21b7c76d77">CmdMessenger::attach</a>(<span class="keywordtype">int</span> cmd_id, <a class="code" href="namespacecmd.html#a20b40ecd3ba46130eef6c125f70c4121">CallBack</a> <a class="code" href="classcallback.html">callback</a>)</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classcmd_1_1_cmd_messenger.html#abbc2aa2a6bc95960215eeaa88c4533a4">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classcmd_1_1_cmd_messenger.html#a92df6db7de8ce3d685d4da21b7c76d77">CmdMessenger::attach</a>(<span class="keywordtype">int</span> cmd_id, <a class="code" href="namespacecmd.html#a20b40ecd3ba46130eef6c125f70c4121">CallBack</a> callback)</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  callbacks_[cmd_id] = <a class="code" href="callback_8h.html#aeed79d4ab5ab2a84f409fecf4c27f70c">makeFunctor</a>((<a class="code" href="class_c_b_functor1w_ret.html">CallBackFunctor</a>*)0, callback);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
@@ -393,7 +393,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="class_cmd_base_html_afcf8a525095025adb2ebf7304511b006"><div class="ttname"><a href="class_cmd_base.html#afcf8a525095025adb2ebf7304511b006">CmdBase::getId</a></div><div class="ttdeci">int getId() const </div><div class="ttdef"><b>Definition:</b> <a href="cmd_base_8cpp_source.html#l00017">CmdBase.cpp:17</a></div></div>
 <div class="ttc" id="classcmd_1_1_cmd_messenger_html_ab95dce49fc8845498c71bae25987a923"><div class="ttname"><a href="classcmd_1_1_cmd_messenger.html#ab95dce49fc8845498c71bae25987a923">cmd::CmdMessenger::setPort</a></div><div class="ttdeci">void setPort(const std::string &amp;port)</div><div class="ttdef"><b>Definition:</b> <a href="cmd_messenger_8cpp_source.html#l00244">CmdMessenger.cpp:244</a></div></div>
 <div class="ttc" id="classcmd_1_1_cmd_messenger_html_a40c20df2763d3af8e59a7c135a82e121"><div class="ttname"><a href="classcmd_1_1_cmd_messenger.html#a40c20df2763d3af8e59a7c135a82e121">cmd::CmdMessenger::waitCmd</a></div><div class="ttdeci">bool waitCmd(int cmd_id, int simple_timeout=-1)</div><div class="ttdef"><b>Definition:</b> <a href="cmd_messenger_8cpp_source.html#l00079">CmdMessenger.cpp:79</a></div></div>
-<div class="ttc" id="classcallback_html"><div class="ttname"><a href="classcallback.html">callback</a></div><div class="ttdef"><b>Definition:</b> <a href="led_8cpp_source.html#l00013">led.cpp:13</a></div></div>
 <div class="ttc" id="interbyte_8cpp_html_aae3ba4688e12d52dca80a55b5725b29d"><div class="ttname"><a href="interbyte_8cpp.html#aae3ba4688e12d52dca80a55b5725b29d">port</a></div><div class="ttdeci">string port(&quot;/dev/ttyACM0&quot;)</div></div>
 <div class="ttc" id="interbyte_8cpp_html_ab5627d8d8b095c198e2523c44ca380ac"><div class="ttname"><a href="interbyte_8cpp.html#ab5627d8d8b095c198e2523c44ca380ac">timeout</a></div><div class="ttdeci">uint32_t timeout</div><div class="ttdef"><b>Definition:</b> <a href="interbyte_8cpp_source.html#l00012">interbyte.cpp:12</a></div></div>
 <div class="ttc" id="classcmd_1_1_cmd_messenger_html_a38dab46f4b3c0c56e8dad6e91b9500c8"><div class="ttname"><a href="classcmd_1_1_cmd_messenger.html#a38dab46f4b3c0c56e8dad6e91b9500c8">cmd::CmdMessenger::isOpen</a></div><div class="ttdeci">bool isOpen() const </div><div class="ttdef"><b>Definition:</b> <a href="cmd_messenger_8cpp_source.html#l00195">CmdMessenger.cpp:195</a></div></div>
@@ -434,7 +433,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 21 2014 15:14:57 for CmdMessenger by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Jul 22 2014 17:45:52 for CmdMessenger by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['callback',['callback',['../classcallback.html#a0d8f5143653fb6d1d6e46603e03a7525',1,'callback']]],
   ['callback_5fnt',['callback_nt',['../sensor_8cpp.html#acc3355f05ec5816d550b825d2bfd0bae',1,'sensor.cpp']]],
   ['callback_5fst',['callback_st',['../sensor_8cpp.html#af15424cb22b5f57096e7366bd74bc2ae',1,'sensor.cpp']]],
-  ['cb',['cb',['../class_oi.html#ac3e1d94a6b155dbfeeb45b1bbb57dd8a',1,'Oi::cb()'],['../led_8cpp.html#a3a590ca502cd6bae808f70bd12d60313',1,'CB():&#160;led.cpp']]],
+  ['cb',['cb',['../class_oi.html#ac3e1d94a6b155dbfeeb45b1bbb57dd8a',1,'Oi']]],
   ['cbfunctiontranslator0',['CBFunctionTranslator0',['../class_c_b_function_translator0.html#a61103ab74629845b2d346a3f0920926f',1,'CBFunctionTranslator0']]],
   ['cbfunctiontranslator0wret',['CBFunctionTranslator0wRet',['../class_c_b_function_translator0w_ret.html#a47476a9784c6b5ee86181c17c3846a5b',1,'CBFunctionTranslator0wRet']]],
   ['cbfunctiontranslator1',['CBFunctionTranslator1',['../class_c_b_function_translator1.html#ac72c06da799c65a37195218a5c800e12',1,'CBFunctionTranslator1']]],
