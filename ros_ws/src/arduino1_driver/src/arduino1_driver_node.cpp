@@ -19,7 +19,9 @@ enum
     kultra_nt,
     kultra_st,
     kultra_et,
-    kultra_wt
+    kultra_wt,
+    kright_motor,
+    kleft_motor,
 };
 
 /*!

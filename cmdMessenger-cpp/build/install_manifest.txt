@@ -3,3 +3,4 @@
 /usr/local/include/CmdMessenger/CmdMessenger.h
 /usr/local/include/CmdMessenger/CmdReceived.h
 /usr/local/include/CmdMessenger/CmdSend.h
+/usr/local/include/CmdMessenger/callback.h

@@ -21,6 +21,7 @@ include=/home/edno/projetos/robot/cmdMessenger-cpp/include{
   CmdMessenger.h
   CmdReceived.h
   CmdSend.h
+  callback.h
 }
 } 
 

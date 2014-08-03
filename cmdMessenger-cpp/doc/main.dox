@@ -18,24 +18,20 @@ Take a look at the main class documentation \ref cmd::CmdMessenger and the comma
 
 Take a look at this simple example \ref led.cpp
 
-\todo write the getting started section
-
 \section features Features
  - Total control over Timeouts trough the Serial Library project.
  - Send and receive ascii commands.
  - Clean API with overloaded operators.
+ - Set methods or global functions as callbacks.
 
 \section problems Problems  
- - Escaping not yet implemented.
  - Does not send or receive binary data.
  - Parsers safety and efficiency needs to be improved.
- - Error check, and loss of data problems.
  - It's written in cross-platform C++, but the project lacks support for other platforms rather than linux.
 
 \section install Installation
 
 \todo Write the install section
 \todo Remember to find a way to ship all dependecies in one package 
-\todo Throw exceptions
 
 */

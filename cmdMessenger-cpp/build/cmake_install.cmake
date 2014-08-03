@@ -54,6 +54,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/edno/projetos/robot/cmdMessenger-cpp/include/CmdMessenger.h"
     "/home/edno/projetos/robot/cmdMessenger-cpp/include/CmdReceived.h"
     "/home/edno/projetos/robot/cmdMessenger-cpp/include/CmdSend.h"
+    "/home/edno/projetos/robot/cmdMessenger-cpp/include/callback.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

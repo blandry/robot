@@ -46,7 +46,9 @@
    kultra_et,
    kultra_wt,
    kright_motor,
-   kleft_motor
+   kleft_motor,
+   kright_encoder,
+   kleft_encoder
  };
  
  CmdMessenger ros_driver(Serial);
@@ -81,8 +83,23 @@
   */
  unsigned long distance(int trig_pin, int echo_pin);
  
-
+ //=========================ENCODER DEFINITIONS===========================//
+ #define left_encoder_pin 2 //interrupt 0
+ #define right_encoder_pin 3 //interrupt 1
+ #define left_encoder_int 0
+ #define right_encoder_int 1
  
+volatile unsigned long int left_encoder_count = 0;
+volatile unsigned long int right_encoder_count = 0;
+unsigned long int right_first_count, left_first_count, right_last_count, left_last_count = 0;
+int right_delta_count = 0;
+int left_delta_count = 0;
+
+unsigned long current_time, last_time, final_time = 0;
+int delta_time;
+ 
+void right_encoder_isr();
+void left_encoder_isr();
 
 /**********************************************
  *****************SETUP************************
@@ -95,7 +112,7 @@ void setup() {
   }  
   
   //motor initialization
-  //Put something like: right_motor.begin(x), whrere x is t
+  //Put something like: right_motor.begin(x), whrere x is the threshold for current
  
   //Setting the ultrassonic trig pins as output 
   pinMode(trig_nt, OUTPUT);
@@ -103,9 +120,15 @@ void setup() {
   pinMode(trig_et, OUTPUT);
   pinMode(trig_wt, OUTPUT);
   
-  //Serial baudrate defitinition
-  Serial.begin(9600);
+  //Setting up the encoders
+  pinMode(right_encoder_pin, INPUT);
+  pinMode(left_encoder_pin, INPUT);
   
+  //Serial baudrate defitinition
+  Serial.begin(115200);
+  
+  //CmdMessenger setup
+  ros_driver.attach(kright_motor, right_motor_cb);
   ros_driver.printLfCr(false);
   
 }
@@ -115,11 +138,44 @@ void setup() {
  **********************************************/
  
 void loop() {
+  
+    current_time = millis();
+    right_first_count = right_encoder_count;
+    left_first_count = left_encoder_count;
+    
+  while(true)
+  {
+    right_encoder_count++;
+    left_encoder_count++;
+   
+    if( (current_time - last_time) >= 30 ){
+      last_time = current_time;
+      
+      delta_time = millis() - current_time;
+      right_delta_count = right_encoder_count - right_first_count;
+      left_delta_count = left_encoder_count - left_first_count; 
+      
+      ros_driver.sendCmdStart(kright_encoder);
+      ros_driver.sendCmdArg<int>(right_delta_count);
+      ros_driver.sendCmdArg<int>(delta_time);
+      ros_driver.sendCmdEnd();
+      
+      ros_driver.sendCmdStart(kleft_encoder);
+      ros_driver.sendCmdArg<int>(left_delta_count);
+      ros_driver.sendCmdArg<int>(delta_time);
+      ros_driver.sendCmdEnd();
+    }
+    
+  }  
+  
   ros_driver.sendCmd<int>( kultra_nt, distance(trig_nt, echo_nt) );
   ros_driver.sendCmd<int>( kultra_st, distance(trig_st, echo_st) );
   ros_driver.sendCmd<int>( kultra_et, distance(trig_et, echo_et) );
-  ros_driver.sendCmd<int>( kultra_wt, distance(trig_wt, echo_wt) );
-  delay(50);
+  ros_driver.sendCmd<int>( kultra_wt, distance(trig_wt, echo_wt) );  
+  
+  ros_driver.feedinSerialData(); 
+  
+  delay(10);
 }
 
 /***********************************************
@@ -136,5 +192,13 @@ unsigned long distance(int trig_pin, int echo_pin)
   
   digitalWrite(trig_pin, LOW);
   
-  return pulseIn(echo_pin, HIGH)/58.2;
+  return pulseIn(echo_pin, HIGH, 80000) / 58;
+}
+
+void right_motor_cb()
+{
+}
+
+void left_motor_cb()
+{
 }

@@ -82,12 +82,12 @@ bool CmdMessenger::waitCmd(int cmd_id, int simple_timeout)
 
 void CmdMessenger::attach(CallBack callback)
 {
-  default_callback_ = callback;
+  default_callback_ = makeFunctor((CallBackFunctor*)0, callback);
 }
 
 void CmdMessenger::attach(int cmd_id, CallBack callback)
 {
-  callbacks_[cmd_id] = callback;
+  callbacks_[cmd_id] = makeFunctor((CallBackFunctor*)0, callback);
 }
 
 void CmdMessenger::feedInSerialData()

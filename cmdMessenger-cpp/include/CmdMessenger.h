@@ -48,6 +48,8 @@
 
 #include "serial/serial.h"
 
+#include "callback.h"
+
 #include "CmdSend.h"
 #include "CmdReceived.h"
 
@@ -87,6 +89,7 @@ namespace cmd{
   using serial::stopbits_one_point_five;
 
   typedef CmdSend Cmd;
+  typedef CBFunctor1wRet<CmdReceived&, void> CallBackFunctor;
   typedef void (*CallBack)(CmdReceived&);
 
   class CmdMessenger
@@ -164,11 +167,37 @@ namespace cmd{
       void attach(CallBack callback);
 
       /*!
+       * Attaches a class method as the default callback for commands without a specific callback.
+       *
+       * \param callback_method A method of type 'void func(CmdReceived&)'.
+       * \param object_ref The object instance of the class.
+       */
+      template<typename T>
+      void attach(void (T::*callback_method)(CmdReceived&), T& object_ref)
+      {
+          default_callback_ = makeFunctor((CallBackFunctor*)0, object_ref, callback_method);
+      }
+
+      /*!
        * Attaches a callback to a command.
-       * \param cmd_id Id of the command to attach a callback.
+       *
+       * \param cmd_id Id of the command to attach a callback to.
        * \param callback Callback to attach.
        */
       void attach(int cmd_id, CallBack callback);
+
+      /*!
+       * Attaches a class method as a callback to a command.
+       *
+       * \param cmd_id Id of the command to attach a callback to.
+       * \param callback_method A method to attach as a callback.
+       * \param object_ref An instance of a object of the class.  
+       */
+      template<typename T>
+      void attach(int cmd_id, void (T::*callback_method)(CmdReceived&), T& object_ref)
+      {
+          callbacks_[cmd_id] = makeFunctor((CallBackFunctor*)0, object_ref, callback_method);
+      }
 
       /*!
        * Sends a command. If ack is desired, it will block till the specified command id is received or timeout is expired.
@@ -306,8 +335,8 @@ namespace cmd{
       char esc_character_;   //character to escape special characters
 
       //Callback
-      std::map<int, CallBack> callbacks_;
-      CallBack default_callback_;
+      std::map<int, CallBackFunctor> callbacks_;
+      CallBackFunctor default_callback_;
   }; // CmdMessenger class
 
 } //end of namespace cmd

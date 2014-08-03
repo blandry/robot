@@ -1,15 +1,8 @@
 var searchData=
 [
-  ['send',['send',['../classcmd_1_1_cmd_messenger.html#a5ea6815a9c6dad49350396839527e25d',1,'cmd::CmdMessenger']]],
-  ['setbaudrate',['setBaudRate',['../classcmd_1_1_cmd_messenger.html#a0fc1bac4fc0d3494893113ade503099b',1,'cmd::CmdMessenger']]],
-  ['setbytesize',['setByteSize',['../classcmd_1_1_cmd_messenger.html#ae05db8b37c1b2ee9be47ea3a3bf045bd',1,'cmd::CmdMessenger']]],
-  ['setcmdsep',['setCmdSep',['../classcmd_1_1_cmd_messenger.html#afebb6b63ae64c661b680597ef29bc879',1,'cmd::CmdMessenger']]],
-  ['setescchar',['setEscChar',['../classcmd_1_1_cmd_messenger.html#ada69819065773ffc3c4923517321d6e5',1,'cmd::CmdMessenger']]],
-  ['setfieldsep',['setFieldSep',['../classcmd_1_1_cmd_messenger.html#af83fbed5873f5e517a0432438dd7c873',1,'cmd::CmdMessenger']]],
-  ['setflowcontrol',['setFlowControl',['../classcmd_1_1_cmd_messenger.html#a5271d79b0f4ae95bea5897b214fbbd4c',1,'cmd::CmdMessenger']]],
-  ['setid',['setId',['../class_cmd_base.html#ac83aced054abdb8e39b358bf109378d6',1,'CmdBase']]],
-  ['setparity',['setParity',['../classcmd_1_1_cmd_messenger.html#ae0bbc0b786fadff310f31c84644b56c5',1,'cmd::CmdMessenger']]],
-  ['setport',['setPort',['../classcmd_1_1_cmd_messenger.html#ab95dce49fc8845498c71bae25987a923',1,'cmd::CmdMessenger']]],
-  ['setstopbits',['setStopBits',['../classcmd_1_1_cmd_messenger.html#a06eaedc3c9e7b0b3cda7b139ee61f5bb',1,'cmd::CmdMessenger']]],
-  ['settimeout',['setTimeout',['../classcmd_1_1_cmd_messenger.html#a0ccea65cba7a807bdf4c476f8db9289a',1,'cmd::CmdMessenger::setTimeout(Timeout &amp;timeout)'],['../classcmd_1_1_cmd_messenger.html#a0d628c1961f8d2b96fa7081961f6a0c1',1,'cmd::CmdMessenger::setTimeout(uint32_t inter_byte_timeout, uint32_t read_timeout_constant, uint32_t read_timeout_multiplier, uint32_t write_timeout_constant, uint32_t write_timeout_multiplier)']]]
+  ['oi',['Oi',['../class_oi.html',1,'Oi'],['../class_oi.html#a49b5f998b6b13e544c585595029f81b1',1,'Oi::oi()']]],
+  ['open',['open',['../classcmd_1_1_cmd_messenger.html#adb4617437e81ccb39b1d314b83db8f6c',1,'cmd::CmdMessenger']]],
+  ['operator_20int',['operator int',['../class_c_b_functor_base.html#a3e132358f2cb0533ab0fe0b833ee0f2d',1,'CBFunctorBase']]],
+  ['operator_28_29',['operator()',['../class_c_b_functor0.html#a202aaeb45c6bfeaf12d2c41da3196a4c',1,'CBFunctor0::operator()()'],['../class_c_b_functor0w_ret.html#af1ef6bed1d39de94804f28ed204a1fb4',1,'CBFunctor0wRet::operator()()'],['../class_c_b_functor1.html#a0d9c9376cf5017cc26c96e7cb66adda1',1,'CBFunctor1::operator()()'],['../class_c_b_functor1w_ret.html#afd89568c8af023ef3f509cd7e1e444a9',1,'CBFunctor1wRet::operator()()'],['../class_c_b_functor2.html#a8ef9e7a58474f11df3e9b0db59068016',1,'CBFunctor2::operator()()'],['../class_c_b_functor2w_ret.html#ac6c5aa2cc0ec49461fef4031c2550121',1,'CBFunctor2wRet::operator()()'],['../class_c_b_functor3.html#a716caade0cfc26f54604c2417fa0ce1f',1,'CBFunctor3::operator()()'],['../class_c_b_functor3w_ret.html#a00518cbfceca05d2f590658dff0a9120',1,'CBFunctor3wRet::operator()()'],['../class_c_b_functor4.html#a11b13f6aec932f356744e591b9bddb78',1,'CBFunctor4::operator()()'],['../class_c_b_functor4w_ret.html#a4ba872c7ae7fb3a7395378ceb76b6bb9',1,'CBFunctor4wRet::operator()()']]],
+  ['operator_3c_3c',['operator&lt;&lt;',['../classcmd_1_1_cmd_send.html#a4c90185bdf7ed1b3442bd69a2a9cd5b2',1,'cmd::CmdSend::operator&lt;&lt;(T arg)'],['../classcmd_1_1_cmd_send.html#ae11b3feb18c2b48113ad048c7f2bda2e',1,'cmd::CmdSend::operator&lt;&lt;(CmdEnd end)']]]
 ];

@@ -3,11 +3,14 @@ arduino1_driver=/home/edno/projetos/robot/ros_ws/src/arduino1_driver CD=. in= ou
  package.xml
  README
 src=/home/edno/projetos/robot/ros_ws/src/arduino1_driver/src{
-  arduino1_driver.cpp
   arduino1_driver_node.cpp
+  arduino_driver.cpp
+arduino1_driver=/home/edno/projetos/robot/ros_ws/src/arduino1_driver/src/arduino1_driver{
+   ArduinoDriver.cpp
+}
 }
 include=/home/edno/projetos/robot/ros_ws/src/arduino1_driver/include/arduino1_driver{
-  arduino1_driver.h
+  ArduinoDriver.h
 }
 } 
 

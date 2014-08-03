@@ -1,0 +1,16 @@
+obstacle_avoidance=/home/edno/projetos/robot/ros_ws/src/obstacle_avoidance CD=. in= out= filter="*.cpp *.c *.h *.hpp *.txt *.xml README"{
+ CMakeLists.txt
+ package.xml
+ README
+src=/home/edno/projetos/robot/ros_ws/src/obstacle_avoidance/src{
+  obstacle_avoider_node.cpp
+  obstacle_detector_node.cpp
+libraries=/home/edno/projetos/robot/ros_ws/src/obstacle_avoidance/src/obstacle_avoidance/{
+   obstacle_detector.cpp
+}
+}
+include=/home/edno/projetos/robot/ros_ws/src/obstacle_avoidance/include/obstacle_avoidance{
+  obstacle_detector.h
+}
+} 
+

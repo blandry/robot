@@ -28,4 +28,4 @@ target_link_libraries( led messenger )
 target_link_libraries( sensor messenger )
 
 install(TARGETS messenger DESTINATION lib)
-install(FILES include/CmdBase.h include/CmdMessenger.h include/CmdReceived.h  include/CmdSend.h DESTINATION include/CmdMessenger)
+install(FILES include/CmdBase.h include/CmdMessenger.h include/CmdReceived.h include/CmdSend.h include/callback.h DESTINATION include/CmdMessenger)
