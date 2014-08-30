@@ -8,7 +8,7 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classcmd_1_1_cmd_messenger_aba80ae7cc283a24b7afa08c18f89af0f}{Cmd\+Messenger} (const std\+::string \&\hyperlink{interbyte_8cpp_aae3ba4688e12d52dca80a55b5725b29d}{port}=\char`\"{}\char`\"{}, uint32\+\_\+t \hyperlink{interbyte_8cpp_ac4f06ea26ed6bd7ae83b92d64ac10b78}{baudrate}=9600, const char field\+\_\+separator= ',', const char cmd\+\_\+separator= ';', const char esc\+\_\+character= '/', Timeout \hyperlink{interbyte_8cpp_ab5627d8d8b095c198e2523c44ca380ac}{timeout}=Timeout(), bytesize\+\_\+t bytesize=eightbits, parity\+\_\+t parity=parity\+\_\+none, stopbits\+\_\+t stopbits=stopbits\+\_\+one, flowcontrol\+\_\+t flowcontrol=flowcontrol\+\_\+none)
+\hyperlink{classcmd_1_1_cmd_messenger_aba80ae7cc283a24b7afa08c18f89af0f}{Cmd\+Messenger} (const std\+::string \&port=\char`\"{}\char`\"{}, uint32\+\_\+t baudrate=9600, const char field\+\_\+separator= ',', const char cmd\+\_\+separator= ';', const char esc\+\_\+character= '/', Timeout timeout=Timeout(), bytesize\+\_\+t bytesize=eightbits, parity\+\_\+t parity=parity\+\_\+none, stopbits\+\_\+t stopbits=stopbits\+\_\+one, flowcontrol\+\_\+t flowcontrol=flowcontrol\+\_\+none)
 \item 
 virtual \hyperlink{classcmd_1_1_cmd_messenger_aa92b483212121faffeb02b7a63450ad0}{$\sim$\+Cmd\+Messenger} ()
 \item 
@@ -44,17 +44,17 @@ void \hyperlink{classcmd_1_1_cmd_messenger_ada69819065773ffc3c4923517321d6e5}{se
 \item 
 char \hyperlink{classcmd_1_1_cmd_messenger_adf36d1a1b153793d9bf33f14b26167a5}{get\+Esc\+Char} () const 
 \item 
-void \hyperlink{classcmd_1_1_cmd_messenger_ab95dce49fc8845498c71bae25987a923}{set\+Port} (const std\+::string \&\hyperlink{interbyte_8cpp_aae3ba4688e12d52dca80a55b5725b29d}{port})
+void \hyperlink{classcmd_1_1_cmd_messenger_ab95dce49fc8845498c71bae25987a923}{set\+Port} (const std\+::string \&port)
 \item 
 std\+::string \hyperlink{classcmd_1_1_cmd_messenger_ab2ebaaabdfeb83decbc868b556a1ea0b}{get\+Port} () const 
 \item 
-void \hyperlink{classcmd_1_1_cmd_messenger_a0ccea65cba7a807bdf4c476f8db9289a}{set\+Timeout} (Timeout \&\hyperlink{interbyte_8cpp_ab5627d8d8b095c198e2523c44ca380ac}{timeout})
+void \hyperlink{classcmd_1_1_cmd_messenger_a0ccea65cba7a807bdf4c476f8db9289a}{set\+Timeout} (Timeout \&timeout)
 \item 
 void \hyperlink{classcmd_1_1_cmd_messenger_a0d628c1961f8d2b96fa7081961f6a0c1}{set\+Timeout} (uint32\+\_\+t inter\+\_\+byte\+\_\+timeout, uint32\+\_\+t read\+\_\+timeout\+\_\+constant, uint32\+\_\+t read\+\_\+timeout\+\_\+multiplier, uint32\+\_\+t write\+\_\+timeout\+\_\+constant, uint32\+\_\+t write\+\_\+timeout\+\_\+multiplier)
 \item 
 Timeout \hyperlink{classcmd_1_1_cmd_messenger_a6b8a4f763475a9e4fbef2237f1050849}{get\+Timeout} () const 
 \item 
-void \hyperlink{classcmd_1_1_cmd_messenger_a0fc1bac4fc0d3494893113ade503099b}{set\+Baud\+Rate} (uint32\+\_\+t \hyperlink{interbyte_8cpp_ac4f06ea26ed6bd7ae83b92d64ac10b78}{baudrate})
+void \hyperlink{classcmd_1_1_cmd_messenger_a0fc1bac4fc0d3494893113ade503099b}{set\+Baud\+Rate} (uint32\+\_\+t baudrate)
 \item 
 uint32\+\_\+t \hyperlink{classcmd_1_1_cmd_messenger_a14c580579b5311ff78cce8de34fe63b2}{get\+Baudrate} () const 
 \item 
@@ -646,5 +646,5 @@ Definition at line 79 of file Cmd\+Messenger.\+cpp.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/edno/projetos/robot/cmd\+Messenger-\/cpp/include/\hyperlink{_cmd_messenger_8h}{Cmd\+Messenger.\+h}\item 
-/home/edno/projetos/robot/cmd\+Messenger-\/cpp/src/\hyperlink{_cmd_messenger_8cpp}{Cmd\+Messenger.\+cpp}\end{DoxyCompactItemize}
+/home/edno/projetos/cmd\+Messenger-\/cpp/include/\hyperlink{_cmd_messenger_8h}{Cmd\+Messenger.\+h}\item 
+/home/edno/projetos/cmd\+Messenger-\/cpp/src/\hyperlink{_cmd_messenger_8cpp}{Cmd\+Messenger.\+cpp}\end{DoxyCompactItemize}

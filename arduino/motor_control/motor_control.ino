@@ -1,4 +1,7 @@
-#define encoder 2
+#include <MotoShield.h>
+MotoShield motor;
+
+#define encoder 21
 
 /*Variavel counter*
  *Tipo volatile unsigned int
@@ -10,13 +13,14 @@
  volatile unsigned int counter = 0;
  unsigned long t0, tf = 0; // Tempos finais e iniciais, para calculo da variacao temporal 
  unsigned int firstCount = 0, lastCount = 0; //variaveis que armazenam valores da variavel counter antes e depois de um pequeno delay
- double angle = 0.2512; //angulo entre faixas ou furos do disco 
+ double angle = 0.12566; //angulo entre faixas ou furos do disco 
 
 void setup() {
   // put your setup code here, to run once:
   pinMode(encoder, INPUT); // Define o pino encoder (2) como entrada.
-  attachInterrupt(0, rpm_counter, RISING); //relaciona a interrupcao 0 (pino 2 no arduino mega 2560), a funcao rpm_counter, que incrementa um contador
+  attachInterrupt(2, rpm_counter, RISING); //relaciona a interrupcao 0 (pino 2 no arduino mega 2560), a funcao rpm_counter, que incrementa um contador
   Serial.begin(9600); // Inicia a comunicacao serial, para exibicao de dados
+  motor.begin(15);
 }
 
 //Incrementa contador
@@ -27,6 +31,7 @@ void rpm_counter()
 
 //Obs.: A funcao millis() retorna o tempo em milissegundos desde que o atual programa comecou a ser executado
 void loop() {
+  motor.go(M2, CCW, 255);
   t0 = millis(); //atualiza o tempo inicial
   firstCount = counter; //Pega atual valor do contador
   

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['ksensor_5fnt',['ksensor_nt',['../sensor_8cpp.html#abc6126af1d45847bc59afa0aa3216b04a99bdc10fb1a44c85624a9bd0ec494a48',1,'sensor.cpp']]],
-  ['ksensor_5fst',['ksensor_st',['../sensor_8cpp.html#abc6126af1d45847bc59afa0aa3216b04a7ac669b2824e7d14fe3f3a1cd3dc240c',1,'sensor.cpp']]],
-  ['ksetled',['ksetled',['../led_8cpp.html#a99fb83031ce9923c84392b4e92f956b5a5d56ee45cbffee5c4c4ee4a5bd92c0a7',1,'led.cpp']]]
+  ['main',['main',['../led_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;led.cpp'],['../sensor_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;sensor.cpp']]],
+  ['main_2edox',['main.dox',['../main_8dox.html',1,'']]]
 ];

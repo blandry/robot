@@ -1,13 +1,17 @@
 var searchData=
 [
-  ['parsebool',['parseBool',['../classcmd_1_1_cmd_received.html#a09f6f7766f89968785c3525e3ce8a625',1,'cmd::CmdReceived::parseBool()'],['../classcmd_1_1_cmd_received.html#a5f2ae1ffa5dd5312ec12c6e9a46ff24b',1,'cmd::CmdReceived::parseBool(bool &amp;arg)']]],
-  ['parsechar',['parseChar',['../classcmd_1_1_cmd_received.html#a7f97a4443af5819d8bcd69e5c51cc4f0',1,'cmd::CmdReceived::parseChar()'],['../classcmd_1_1_cmd_received.html#a842709f94d709973b62bbd74320825a5',1,'cmd::CmdReceived::parseChar(char &amp;arg)']]],
-  ['parsedouble',['parseDouble',['../classcmd_1_1_cmd_received.html#a181d947566bb4a9e21725a4e99588c1f',1,'cmd::CmdReceived::parseDouble()'],['../classcmd_1_1_cmd_received.html#a8866107ea61e761416948066b428e54f',1,'cmd::CmdReceived::parseDouble(double &amp;arg)']]],
-  ['parsefloat',['parseFloat',['../classcmd_1_1_cmd_received.html#ac29ede9c4b16e3a768b942a602c72f30',1,'cmd::CmdReceived::parseFloat()'],['../classcmd_1_1_cmd_received.html#a6194b57482cf2f9e235821f03c364496',1,'cmd::CmdReceived::parseFloat(float &amp;arg)']]],
-  ['parseint',['parseInt',['../classcmd_1_1_cmd_received.html#a267e265e7bdf5f5e45c1153d78ca0223',1,'cmd::CmdReceived::parseInt()'],['../classcmd_1_1_cmd_received.html#a8bb8b048253bee5f092d9edd67f8b981',1,'cmd::CmdReceived::parseInt(int &amp;arg)']]],
-  ['parser',['parser',['../interbyte_8cpp.html#afa2ca8c14c278a379901401cb0873e61',1,'interbyte.cpp']]],
-  ['parser_2ecpp',['parser.cpp',['../parser_8cpp.html',1,'']]],
-  ['parsestring',['parseString',['../classcmd_1_1_cmd_received.html#adf3bc587f2a9b3007b4a5e447116a871',1,'cmd::CmdReceived::parseString()'],['../classcmd_1_1_cmd_received.html#ad0a14bef5f41acdbe3dba8369fdc015a',1,'cmd::CmdReceived::parseString(std::string &amp;arg)']]],
-  ['port',['port',['../interbyte_8cpp.html#aae3ba4688e12d52dca80a55b5725b29d',1,'interbyte.cpp']]],
-  ['printusage',['printUsage',['../interbyte_8cpp.html#aead97c99e70c0da7036fbbe230ef68b6',1,'interbyte.cpp']]]
+  ['send',['send',['../classcmd_1_1_cmd_messenger.html#a5ea6815a9c6dad49350396839527e25d',1,'cmd::CmdMessenger']]],
+  ['sensor_2ecpp',['sensor.cpp',['../sensor_8cpp.html',1,'']]],
+  ['serialtransport_2eh',['SerialTransport.h',['../_serial_transport_8h.html',1,'']]],
+  ['setbaudrate',['setBaudRate',['../classcmd_1_1_cmd_messenger.html#a0fc1bac4fc0d3494893113ade503099b',1,'cmd::CmdMessenger']]],
+  ['setbytesize',['setByteSize',['../classcmd_1_1_cmd_messenger.html#ae05db8b37c1b2ee9be47ea3a3bf045bd',1,'cmd::CmdMessenger']]],
+  ['setcmdsep',['setCmdSep',['../classcmd_1_1_cmd_messenger.html#afebb6b63ae64c661b680597ef29bc879',1,'cmd::CmdMessenger']]],
+  ['setescchar',['setEscChar',['../classcmd_1_1_cmd_messenger.html#ada69819065773ffc3c4923517321d6e5',1,'cmd::CmdMessenger']]],
+  ['setfieldsep',['setFieldSep',['../classcmd_1_1_cmd_messenger.html#af83fbed5873f5e517a0432438dd7c873',1,'cmd::CmdMessenger']]],
+  ['setflowcontrol',['setFlowControl',['../classcmd_1_1_cmd_messenger.html#a5271d79b0f4ae95bea5897b214fbbd4c',1,'cmd::CmdMessenger']]],
+  ['setid',['setId',['../class_cmd_base.html#ac83aced054abdb8e39b358bf109378d6',1,'CmdBase']]],
+  ['setparity',['setParity',['../classcmd_1_1_cmd_messenger.html#ae0bbc0b786fadff310f31c84644b56c5',1,'cmd::CmdMessenger']]],
+  ['setport',['setPort',['../classcmd_1_1_cmd_messenger.html#ab95dce49fc8845498c71bae25987a923',1,'cmd::CmdMessenger']]],
+  ['setstopbits',['setStopBits',['../classcmd_1_1_cmd_messenger.html#a06eaedc3c9e7b0b3cda7b139ee61f5bb',1,'cmd::CmdMessenger']]],
+  ['settimeout',['setTimeout',['../classcmd_1_1_cmd_messenger.html#a0ccea65cba7a807bdf4c476f8db9289a',1,'cmd::CmdMessenger::setTimeout(Timeout &amp;timeout)'],['../classcmd_1_1_cmd_messenger.html#a0d628c1961f8d2b96fa7081961f6a0c1',1,'cmd::CmdMessenger::setTimeout(uint32_t inter_byte_timeout, uint32_t read_timeout_constant, uint32_t read_timeout_multiplier, uint32_t write_timeout_constant, uint32_t write_timeout_multiplier)'],['../class_transport_layer.html#a3378e82dc61ea6d5c7416bb47dcb540e',1,'TransportLayer::setTimeout()']]]
 ];

@@ -1,0 +1,95 @@
+\hypertarget{class_transport_layer}{\section{Transport\+Layer Class Reference}
+\label{class_transport_layer}\index{Transport\+Layer@{Transport\+Layer}}
+}
+
+
+{\ttfamily \#include $<$Transport\+Layer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_transport_layer_a554ee40eacfdb018f103033ce000df7d}{Transport\+Layer} ()
+\item 
+virtual \hyperlink{class_transport_layer_a9773dfdae9b71a52d7c101fb59992fbf}{$\sim$\+Transport\+Layer} ()
+\item 
+virtual size\+\_\+t \hyperlink{class_transport_layer_aaf4df6f91520840b4b203c3d17c239e5}{bytes\+Available} ()=0
+\item 
+virtual void \hyperlink{class_transport_layer_a7854678464b710ddd88c8f225ea3951a}{read} (unsigned char $\ast$data, size\+\_\+t num\+\_\+bytes)=0
+\item 
+virtual void \hyperlink{class_transport_layer_aff0f73e14debf1e433bd218e9aefe399}{write} (const unsigned char $\ast$data)=0
+\item 
+virtual void \hyperlink{class_transport_layer_a3378e82dc61ea6d5c7416bb47dcb540e}{set\+Timeout} (int read\+\_\+timeout\+\_\+constant, int write\+\_\+timeout\+\_\+constant, int inter\+\_\+byte\+\_\+timeout=0, int read\+\_\+timeout\+\_\+multiplier=0, int write\+\_\+timeout\+\_\+multiplier=0)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Pure abstract class, or interface, that provides abstraction of transport layer into Cmd\+Messenger. 
+
+Definition at line 12 of file Transport\+Layer.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_transport_layer_a554ee40eacfdb018f103033ce000df7d}{\index{Transport\+Layer@{Transport\+Layer}!Transport\+Layer@{Transport\+Layer}}
+\index{Transport\+Layer@{Transport\+Layer}!Transport\+Layer@{Transport\+Layer}}
+\subsubsection[{Transport\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}Transport\+Layer\+::\+Transport\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_transport_layer_a554ee40eacfdb018f103033ce000df7d}
+
+
+Definition at line 15 of file Transport\+Layer.\+h.
+
+\hypertarget{class_transport_layer_a9773dfdae9b71a52d7c101fb59992fbf}{\index{Transport\+Layer@{Transport\+Layer}!````~Transport\+Layer@{$\sim$\+Transport\+Layer}}
+\index{````~Transport\+Layer@{$\sim$\+Transport\+Layer}!Transport\+Layer@{Transport\+Layer}}
+\subsubsection[{$\sim$\+Transport\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}virtual Transport\+Layer\+::$\sim$\+Transport\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_transport_layer_a9773dfdae9b71a52d7c101fb59992fbf}
+
+
+Definition at line 16 of file Transport\+Layer.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_transport_layer_aaf4df6f91520840b4b203c3d17c239e5}{\index{Transport\+Layer@{Transport\+Layer}!bytes\+Available@{bytes\+Available}}
+\index{bytes\+Available@{bytes\+Available}!Transport\+Layer@{Transport\+Layer}}
+\subsubsection[{bytes\+Available}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\+\_\+t Transport\+Layer\+::bytes\+Available (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_transport_layer_aaf4df6f91520840b4b203c3d17c239e5}
+\hypertarget{class_transport_layer_a7854678464b710ddd88c8f225ea3951a}{\index{Transport\+Layer@{Transport\+Layer}!read@{read}}
+\index{read@{read}!Transport\+Layer@{Transport\+Layer}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Transport\+Layer\+::read (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{data, }
+\item[{size\+\_\+t}]{num\+\_\+bytes}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_transport_layer_a7854678464b710ddd88c8f225ea3951a}
+\hypertarget{class_transport_layer_a3378e82dc61ea6d5c7416bb47dcb540e}{\index{Transport\+Layer@{Transport\+Layer}!set\+Timeout@{set\+Timeout}}
+\index{set\+Timeout@{set\+Timeout}!Transport\+Layer@{Transport\+Layer}}
+\subsubsection[{set\+Timeout}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Transport\+Layer\+::set\+Timeout (
+\begin{DoxyParamCaption}
+\item[{int}]{read\+\_\+timeout\+\_\+constant, }
+\item[{int}]{write\+\_\+timeout\+\_\+constant, }
+\item[{int}]{inter\+\_\+byte\+\_\+timeout = {\ttfamily 0}, }
+\item[{int}]{read\+\_\+timeout\+\_\+multiplier = {\ttfamily 0}, }
+\item[{int}]{write\+\_\+timeout\+\_\+multiplier = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_transport_layer_a3378e82dc61ea6d5c7416bb47dcb540e}
+\hypertarget{class_transport_layer_aff0f73e14debf1e433bd218e9aefe399}{\index{Transport\+Layer@{Transport\+Layer}!write@{write}}
+\index{write@{write}!Transport\+Layer@{Transport\+Layer}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Transport\+Layer\+::write (
+\begin{DoxyParamCaption}
+\item[{const unsigned char $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_transport_layer_aff0f73e14debf1e433bd218e9aefe399}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/edno/projetos/cmd\+Messenger-\/cpp/include/\hyperlink{_transport_layer_8h}{Transport\+Layer.\+h}\end{DoxyCompactItemize}
